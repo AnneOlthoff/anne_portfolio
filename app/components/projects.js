@@ -23,9 +23,10 @@ export default function Projects() {
 
   return (
     <section style={styles.container}>
+      <div style={styles.heading}>
       <h1>My work</h1>
       <p>Where I am today and how I got here, read more about my current possition at Bitvis or about some project from Univiersity</p>
-
+      </div>
       <div style={styles.grid}>
         {projects.map((project) => (
           <a
@@ -72,13 +73,15 @@ const styles = {
     padding: '4rem',
     textAlign: 'left',
   },
+
+  
   links: {
     alignItems: 'left',
   },
   heading: {
-    fontSize: '2rem',
+    
     marginBottom: '1rem',
-    color: '#0070f3',
+    color: 'white',
   },
   grid: {
     display: 'grid',
