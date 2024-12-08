@@ -1,59 +1,96 @@
+'use client';
+
+import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-
 export default function Projects() {
-    const projects = [
-      { id: 'test-one', name: 'Project One', description: 'A cool project.' },
-      { id: 'test-two',name: 'Project Two', description: 'Another cool project.'},
-      { id: 'test-three',name: 'Project Three', description: 'Yet another one!' },
-    ];
-  
-    return (
-      <section style={styles.container}>
-        <h2 style={styles.heading}>Mydd s</h2>
-        <div style={styles.grid}>
-          
-             
-             {projects.map((project) => (
-              <Link key={project.id} href={`/projects/${project.id}` } >
-            
-              <p> {project.name}</p>
-           
-       
-          </Link>
-        ))}
+  const projects = [
+    { id: 'bitvis', name: 'Bitvis', description: 'A cool project.' },
+    { id: 'openspace', name: 'Master thesis', description: 'Another cool project.' },
+  ];
 
-            </div>
-       
-      </section>
-    );
-  }
-  
-  const styles = {
-    container: {
-      padding: '2rem',
-      textAlign: 'center',
-    },
-    
-    links: {
-      alignItems: 'left'
-     },
-    
-    grid: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-      gap: '1.5rem',
-    },
-    card: {
-      border: '1px solid #D3CDC0',
-      borderRadius: '8px',
-      padding: '1rem',
-      
-      backgroundColor: '#232323',
-    },
-    link: {
-      color: '#0070f3',
-      textDecoration: 'none',
-      fontWeight: 'bold',
-    },
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleScroll = (id) => {
+    const element = document.querySelector(`#${id}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.warn(`Element with id "${id}" not found.`);
+    }
   };
+
+  return (
+    <section style={styles.container}>
+      <h1>My work</h1>
+      <p>Where I am today and how I got here, read more about my current possition at Bitvis or about some project from Univiersity</p>
+
+      <div style={styles.grid}>
+        {projects.map((project) => (
+          <a
+            key={project.id}
+            href={`#${project.id}`}
+            style={styles.card}
+            onClick={(e) => {
+              e.preventDefault(); // Förhindra standardnavigering
+              handleScroll(project.id); // Scrolla smidigt till sektionen
+            }}
+          >
+            <h3 style={styles.links}>{project.name}</h3>
+          
+          </a>
+        ))}
+      </div>
+
+      {/* Lägg till sektionerna som ska scrollas till */}
+           
+
+      {projects.map((project) => (
+        <div
+          key={project.id}
+          id={project.id}
+          style={{
+            marginTop: '4rem',
+            padding: '2rem',
+            border: '1px solid #D3CDC0',
+            backgroundColor: 'red',
+            borderRadius: '8px',
+          }}
+        >
+          <h2>{project.name}</h2>
+          <p>Details about {project.name}: {project.description}</p>
+     
+        </div>
+      ))}
+    </section>
+  );
+}
+
+const styles = {
+  container: {
+    padding: '4rem',
+    textAlign: 'left',
+  },
+  links: {
+    alignItems: 'left',
+  },
+  heading: {
+    fontSize: '2rem',
+    marginBottom: '1rem',
+    color: '#0070f3',
+  },
+  grid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, 150px)',
+    gap: '1rem',
+  },
+  card: {
+   
+    borderRadius: '8px',
+    padding: '8px',
+    backgroundColor: '#232323',
+    color: '#ffffff',
+    cursor: 'pointer',
+  },
+};

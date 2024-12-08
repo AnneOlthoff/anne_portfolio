@@ -1,7 +1,7 @@
 
 import Head from 'next/head';
 //import { ReactComponent as Logo } from "./assets/testlogga.svg"; // Importera SVG som React-komponent
-import Logo from "./assets/testlogga.svg";
+import Logo from "./assets/testlogga_line.svg";
 
 import Header from './components/Header';
 import Projects from './components/Projects';
@@ -22,8 +22,7 @@ export default function Home() {
         
         </div>
         <div id="my-work">
-    <h2>Hejhejehej</h2>
-    {/* Innehåll */}
+    <Projects/>
   </div>
         <Footer />
       </div>
