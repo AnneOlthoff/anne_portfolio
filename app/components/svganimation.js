@@ -34,6 +34,7 @@ export default function svganimation() {
           stroke-dashoffset: -10000; /* Börja utanför synfältet */
           animation: draw 4s ease-out forwards; /* Animering som ritar linjen */
           onAnimationEnd={handleAnimationEnd} 
+          
           stroke-linecap: round;
           stroke-linejoin: round;
         }
