@@ -1,5 +1,6 @@
 'use client';
 
+
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 
@@ -25,7 +26,7 @@ export default function Projects() {
     <section style={styles.container}>
       <div style={styles.heading}>
       <h1>My work</h1>
-      <p>Where I am today and how I got here, read more about my current possition at Bitvis or about some project from Univiersity</p>
+      <p>Where I am today and how I got here, read more about my current possition at Bitvis or about my thesis from Univiersity</p>
       </div>
       <div style={styles.grid}>
         {projects.map((project) => (

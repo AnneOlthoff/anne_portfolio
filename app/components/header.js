@@ -72,7 +72,7 @@ export default function Header() {
     },
     link: {
       margin: '0 0.5rem',
-      color: '#0070f3',
+      color: 'white',
       textDecoration: 'none',
     },
     subtitle: {

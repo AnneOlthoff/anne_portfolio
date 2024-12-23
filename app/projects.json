@@ -1,0 +1,21 @@
+
+
+{
+ "projects": [
+
+    {
+        "title": "My Title 1",
+        "content": "Lorem Ipsum 1"
+    },
+
+    {
+        "title": "My Title 2",
+        "content": "Lorem Ipsum 2"
+    }
+
+
+ ] 
+
+
+}
+
