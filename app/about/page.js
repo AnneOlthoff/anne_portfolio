@@ -132,7 +132,7 @@ const styles = {
   facts: {
     flex: 2,
     flexDirection: 'column',
-    minWidth: '300px',
+    minWidth: '200px',
     position: 'relative',
     flexWrap: 'wrap',
 
@@ -149,7 +149,7 @@ const styles = {
     
     flex: '1 1 calc(33.333% - 2rem)',
     flex: 2,
-    minWidth: '300px', 
+    minWidth: '200px', 
 
   }
  
