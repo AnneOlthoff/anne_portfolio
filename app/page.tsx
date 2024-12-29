@@ -11,10 +11,6 @@ import SVGAnimation from './components/svganimation'
 
 export default function Home() {
 
- 
-  
-
-
 
   return (
     <>

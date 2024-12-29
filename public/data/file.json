@@ -1,0 +1,16 @@
+
+[
+    {
+      "id": 1,
+      "title": "Projekt 1",
+      "content": "Detta är innehållet för projekt 1.",
+      "image": "/images/grace.png"
+    },
+    {
+      "id": 2,
+      "title": "OpenSpace",
+       "content": "I completed my master’s degree at New York University, working on a project with OpenSpace. OpenSpace is a 3D visualization software that visualizes the whole world, displaying planets and stars in our solar system where we display data on Earth.\n The project aimed to create a user-friendly interface in OpenSpace where a novice can explore 3D visualized climate change on the Earth’s surface. The visualization will be displayed using different datasets, meaning placing climate indicators over the Earth’s surface that correspond to how it appears and changes in specific places and over time. \n An interface was created so the user could navigate amongst the different datasets in two different ways. The user could both use Open-world navigation and discover the datasets by themself by rotating the earth but also follow a story where the user was directed to interesting places. ",
+      "image": "/images/grace.png"
+    }
+  ]
+

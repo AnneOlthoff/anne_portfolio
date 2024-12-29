@@ -1,25 +1,37 @@
 'use client';
-
-
 import { usePathname, useRouter } from 'next/navigation';
+import {useState, useEffect, useRef} from 'react'
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Projects() {
-  const projects = [
-    { id: 'bitvis', name: 'Bitvis', description: 'A cool project.' },
-    { id: 'openspace', name: 'Master thesis', description: 'Another cool project.' },
-  ];
+
+  const [data, setData] = useState([]);
+  const sectionsRefs = useRef([])
+
+  console.log('Hämtar från URL:', '/data/file.json');
+  useEffect(() => {
+    fetch('data/file.json')
+      .then((response) => response.json())
+      .then((json) => setData(json));
+  }, []);
+
+
+  
 
   const router = useRouter();
   const pathname = usePathname();
-
-  const handleScroll = (id) => {
-    const element = document.querySelector(`#${id}`);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      console.warn(`Element with id "${id}" not found.`);
+  //const data = JSON.parse(file);
+   
+  // Lägg till referenser för varje sektion
+   
+   const addToRefs = (el) => {
+    if (el && !sectionsRefs.current.includes(el)) {
+      sectionsRefs.current.push(el);
     }
+  };
+  const scrollToSection = (index) => {
+    sectionsRefs.current[index]?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -28,50 +40,59 @@ export default function Projects() {
       <h1>My work</h1>
       <p>Where I am today and how I got here, read more about my current possition at Bitvis or about my thesis from Univiersity</p>
       </div>
+      
+      {/* scrollknappar */}
       <div style={styles.grid}>
-        {projects.map((project) => (
-          <a
+        {data.map((project, index) => (
+          <button
             key={project.id}
-            href={`#${project.id}`}
+            onClick={() => scrollToSection(index)}
             style={styles.card}
-            onClick={(e) => {
-              e.preventDefault(); // Förhindra standardnavigering
-              handleScroll(project.id); // Scrolla smidigt till sektionen
-            }}
           >
-            <h3 style={styles.links}>{project.name}</h3>
-          
-          </a>
+            {project.title}
+          </button>
         ))}
       </div>
+    
 
+    <div>
+         <h1>{data.title}</h1>
+         <p>{data.content}</p>
+    
+      </div>
+          
       {/* Lägg till sektionerna som ska scrollas till */}
-           
+      {data.map((item) => (
+          <div key={item.id} ref={addToRefs} style={{ marginTop: '6rem',
+          paddingBottom: '2rem', 
+           }}>
+            <h2>{item.title}</h2>
+            <br/>
+            <div style={styles.project_grid}>
+            
+               <Image src={item.image} alt={item.title} width={400} height={300} />
+               <p >
+            
+                {item.content.split("\n").map((line, index) => (
+                 <span key={index}>
+                     {line}
+                    <br />
+                 </span>
+                  ))}
+              </p>
+            </div>
+            
+          </div>
+        ))}
 
-      {projects.map((project) => (
-        <div
-          key={project.id}
-          id={project.id}
-          style={{
-            marginTop: '4rem',
-            padding: '2rem',
-            border: '1px solid #D3CDC0',
-            backgroundColor: 'red',
-            borderRadius: '8px',
-          }}
-        >
-          <h2>{project.name}</h2>
-          <p>Details about {project.name}: {project.description}</p>
      
-        </div>
-      ))}
     </section>
   );
 }
 
 const styles = {
   container: {
-    padding: '4rem',
+    padding: '2rem',
     textAlign: 'left',
   },
 
@@ -89,6 +110,13 @@ const styles = {
     gridTemplateColumns: 'repeat(auto-fit, 150px)',
     gap: '1rem',
   },
+  project_grid: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    gap: '20px',
+   
+  },
+
   card: {
    
     borderRadius: '8px',

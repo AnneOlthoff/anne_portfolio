@@ -13,6 +13,9 @@ export default function Footer() {
       textAlign: 'center',
       backgroundColor: '#282727',
       marginTop: '2rem',
+
+     
+        
       
     },
    

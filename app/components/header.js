@@ -30,10 +30,10 @@ export default function Header() {
           
             <Link href="#my-work" onClick={handleScroll} scroll={false} style={styles.link}>My work</Link>
             <Link href="/about" style={styles.link}>About me</Link>
-          <a href="https://github.com/yourusername" style={styles.link}>
+          <a href="https://github.com/AnneOlthoff" style={styles.link}>
             GitHub
           </a>
-          <a href="https://linkedin.com/in/yourusername" style={styles.link}>
+          <a href="https://www.linkedin.com/in/anne-olthoff/" style={styles.link}>
             LinkedIn
           </a>
           </div>
@@ -48,13 +48,14 @@ export default function Header() {
       position: 'sticky',
       top: '0px',
       display: 'flex',
-      justifyContent: 'space-between', /* Fördelar elementen till vänster och höger */
-      alignItems: 'center', /* Justerar vertikalt (valfritt) */
+      justifyContent: 'space-between', 
+      alignItems: 'center', 
       paddingLeft: '24px',
       paddingTop: '32px',
+      paddingBottom: '8px',
       
-      paddingRight: '20px', /* Marginal runt om (valfritt) */
-      backgroundColor: '#282727' /* Bakgrundsfärg (valfritt) */
+      paddingRight: '20px',
+      backgroundColor: '#282727' 
     },
     links: {
      alignItems: 'left'
@@ -75,8 +76,5 @@ export default function Header() {
       color: 'white',
       textDecoration: 'none',
     },
-    subtitle: {
-      fontSize: '1.2rem',
-      color: '#666',
-    },
+   
   };
