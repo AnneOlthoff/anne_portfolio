@@ -22,10 +22,26 @@ body {
 
 h1 {
 	font-size: 5em; 
+  
 }
 h2 {
-	font-size: 24px; 
+	font-size: 28px; 
+  font-weight: 400;
 }
+h3 {
+  font-size: 20px;
+
+  font-weight: 600;
+}
+h4{
+  font-size: 18px;
+  font-style: italic;
+  color: #E9E9E9;
+}
+p{
+  color: #E9E9E9;
+}
+
 	
 @layer utilities {
   .text-balance {

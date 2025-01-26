@@ -23,13 +23,7 @@ export default function About() {
       <Header />
       <main style={styles.main}>
         <div style={styles.content}>
-        <h1>A little bit about me</h1>
-        <p>Hi! I'm Anne, a UX designer based in Linköping, Sweden.</p>
-        <p>
-          I have over two years of experience working at Bitvis, a scale-up
-          company where I help create intuitive and engaging user experiences.
-        </p>
-        <br/><br/>
+       
         <div style={styles.inNumbers}>
           <div style={styles.head}>
 
@@ -48,8 +42,8 @@ export default function About() {
           </div>
           <div style={styles.fact}>
              
-             <h1> <YearsCounter startYear={2022} />+ </h1> 
-             <p> <YearsCounter startYear={2022} />+ years of experience working in UX </p>
+             <h1>  2+ </h1> 
+             <p>  Over two years of experience working in UX </p>
              <br/>
           </div>
 
@@ -97,6 +91,7 @@ const styles = {
     display: 'flex',
    flexDirection: 'column',
    minHeight: '100vh',
+   
   },
   
   main: {
@@ -109,6 +104,10 @@ const styles = {
   content: {
     flex: 1,
     padding: '2rem' ,
+    paddingTop: "6rem",
+
+    paddingLeft: '10%',
+    paddingRight: '10%',
    
   },
 

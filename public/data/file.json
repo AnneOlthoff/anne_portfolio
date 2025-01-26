@@ -1,16 +1,97 @@
 
-[
+{
+  "projects": [
     {
       "id": 1,
-      "title": "Projekt 1",
-      "content": "Detta är innehållet för projekt 1.",
-      "image": "/images/grace.png"
+      "what": "Simple Porfolio",
+      "images": [
+        {
+          "image": "/images/testlogga_line.svg"
+        }
+       
+      ],
+      "heading": "Implementaion and Designing a simple portfolio",
+      "subheading": "A Project for larning more about react (2024)",
+      "introduction": "This webpage is a space where you can get a quick and honest impression of who I am and the work I do. My focus has been on creating a simple and intuitive design without relying on unnecessary animations or flashy distractions. Instead, I’ve built this portfolio to reflect my passion for simplicity, clarity, and functionality.",
+
+     
+      "sections": [
+        {
+          "title" : "Design Process",
+          "content": "I have designed this page naturally, drawing inspiration from others and selecting elements that align with my three guiding principles: simplicity, clarity, and efficiency.",
+         
+          "steps": [            
+            "Efficiency: While I would love for my readers to learn everything about me, I respect their valuable time and aim to deliver key insights quickly. ",
+            "Clarity: I want visitors to get a quick glimpse of my work fast enough to capture interest but slow enough to intrigue leaving them wanting to know more.",
+            "Simplicity: To be kind to the developer, which happens to be me"
+          ]
+       
+        },
+        {
+          "title" : "Code Behind the Scenes",
+          "content": "Every part of this portfolio is built using React, and Next.js. Building this portfolio has been a learning journey, where I’ve honed my skills in React while keeping the design and functionality aligned with my principles of simplicity, clarity, and efficiency."
+        }
+      ]
+      
     },
+
     {
       "id": 2,
-      "title": "OpenSpace",
-       "content": "I completed my master’s degree at New York University, working on a project with OpenSpace. OpenSpace is a 3D visualization software that visualizes the whole world, displaying planets and stars in our solar system where we display data on Earth.\n The project aimed to create a user-friendly interface in OpenSpace where a novice can explore 3D visualized climate change on the Earth’s surface. The visualization will be displayed using different datasets, meaning placing climate indicators over the Earth’s surface that correspond to how it appears and changes in specific places and over time. \n An interface was created so the user could navigate amongst the different datasets in two different ways. The user could both use Open-world navigation and discover the datasets by themself by rotating the earth but also follow a story where the user was directed to interesting places. ",
-      "image": "/images/grace.png"
+      "images":[
+        {
+          "image": "/images/introduction_blue.png"
+        },
+        {
+          "image": "/images/grace.png"
+        }
+       
+      ],
+      "what": "OpenSpace",
+      "heading": "Interactive Visualization of Climate Change in the OpenSpace Project",
+      "subheading": "Master’s Thesis, Linköping University at New York University (2022) ",
+      "introduction": "For my master’s thesis, I designed and developed an interactive graphical user interface (GUI) to visualize climate change on Earth’s surface, with a specific focus on the melting glaciers of Antarctica. This project was part of the international OpenSpace initiative, a collaboration involving universities, research institutions, and NASA.",
+      "sections": [
+        {
+          "title": "Overview",
+          "content": "For my master’s thesis, I designed and developed an interactive graphical user interface (GUI) to visualize climate change on Earth’s surface, with a specific focus on the melting glaciers of Antarctica. This project was part of the international OpenSpace initiative, a collaboration involving universities, research institutions, and NASA."
+        },
+        {
+          "title": "Design Process",
+          "content": "The project followed an iterative design methodology to create a user-friendly interface that communicates complex scientific data to the general public. I conducted in-depth research to better understand the challenges and user needs related to climate visualization. This process involved close collaboration with climate experts and stakeholders to refine the project’s focus and ensure relevance. Additionally, I developed wireframes and prototypes in Figma, which were iteratively tested to explore and validate interaction concepts.",
+          
+          "steps": [
+            "Story-driven exploration: Users could follow an engaging narrative to learn about climate change, transitioning between global trends and localized impacts.",
+            "Interactive controls: Time sliders, visual overlays, and color-coded indicators allowed users to explore datasets intuitively.",
+            "Open-world mode: Users could freely explore climate data globally, discovering patterns and correlations on their own terms."
+          ]
+        },
+        {
+          "title": "Development",
+          "content": "The technical implementation involved programming the GUI in React and integrating it with OpenSpace’s C++ backend using a custom-built API.",
+          "steps": [
+            "Transformed multidimensional satellite datasets into OpenSpace-compatible formats using Python.",
+            "Handled datasets such as global ocean currents, ice melt trends, and gravity field measurements.",
+            "Enabled smooth transitions between local and global visualizations, ensuring accessibility for non-expert users."
+          ]
+        },
+        {
+          "title": "Outcome",
+          "content": "The final product was tested with seven users from varied backgrounds, including climate experts and non-specialists, yielding valuable insights for refinement. Feedback confirmed that the application succeeded in making complex climate data more understandable and engaging."
+        },
+        {
+          "title": "Skills Highlighted",
+          "steps": [
+            "User experience (UX) design",
+            "Interactive storytelling",
+            "Front-end development with React",
+            "Data processing and transformation with Python",
+            "Integration with scientific visualization tools"
+          ]
+        }
+      ]
+    
+      
     }
   ]
+}
 

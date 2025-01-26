@@ -11,11 +11,14 @@ export default function Projects() {
 
   console.log('Hämtar från URL:', '/data/file.json');
   useEffect(() => {
-    fetch('data/file.json')
-      .then((response) => response.json())
-      .then((json) => setData(json));
+    fetch('/data/file.json') // Stig till filen i public-mappen
+      .then((response) => {
+        if (!response.ok) throw new Error('Failed to fetch data');
+        return response.json();
+      })
+      .then((json) => setData(json.projects)) // Antag att "projects" är roten i JSON-strukturen
+      .catch((error) => console.error('Error loading JSON:', error));
   }, []);
-
 
   
 
@@ -40,7 +43,7 @@ export default function Projects() {
       <h1>My work</h1>
       <p>Where I am today and how I got here, read more about my current possition at Bitvis or about my thesis from Univiersity</p>
       </div>
-      
+    
       {/* scrollknappar */}
       <div style={styles.grid}>
         {data.map((project, index) => (
@@ -49,41 +52,70 @@ export default function Projects() {
             onClick={() => scrollToSection(index)}
             style={styles.card}
           >
-            {project.title}
+            {project.what}
           </button>
         ))}
       </div>
-    
+    <br></br>
 
-    <div>
-         <h1>{data.title}</h1>
-         <p>{data.content}</p>
-    
-      </div>
+   <div style={styles.projects}>
           
       {/* Lägg till sektionerna som ska scrollas till */}
-      {data.map((item) => (
-          <div key={item.id} ref={addToRefs} style={{ marginTop: '6rem',
-          paddingBottom: '2rem', 
-           }}>
-            <h2>{item.title}</h2>
-            <br/>
-            <div style={styles.project_grid}>
-            
-               <Image src={item.image} alt={item.title} width={400} height={300} />
-               <p >
-            
-                {item.content.split("\n").map((line, index) => (
-                 <span key={index}>
-                     {line}
-                    <br />
-                 </span>
-                  ))}
-              </p>
+        {/* Rendera projekt */}
+        {data.map((project, index) => (
+          
+        <div key={index} ref={addToRefs} style={styles.projectContainer}>
+          <h2>{project.heading}</h2>
+          <h4>{project.subheading}</h4>
+          <br></br>
+
+          <div style={styles.project_grid}>
+          <p>
+          {project.images.map((image, secIndex) => (
+            <div  style={styles.imageContainer}>
+            <Image
+                src={image.image || '/default-image.jpg'}
+                alt={image.title || 'Project Image'}
+                width = {300}
+                height={300} // Fast höjd, ändra vid behov
+                onError={(e) => (e.target.src = '/default-image.jpg')}
+            />
+
             </div>
             
+            ))}
+            </p>
+            <p >
+          
+                  {project.sections.map((section, secIndex) => (
+                    
+                    <div key={secIndex} style={styles.step}>
+                      
+                      <h3>{section.title}</h3>
+                      <p>{section.content}</p>
+                      <p>
+                      {section.steps && (
+                        <ul >
+                          {section.steps.map((step, stepIndex) => (
+                            <li key={stepIndex} style ={styles.step}>{step}</li>
+                          ))}
+                        </ul>
+                      )}
+                      </p>
+                      
+                    </div>
+                  ))}
+               
+            </p>
+          
           </div>
-        ))}
+         
+        </div>
+         
+      ))}
+    </div>
+    
+        
 
      
     </section>
@@ -92,11 +124,41 @@ export default function Projects() {
 
 const styles = {
   container: {
-    padding: '2rem',
+    paddingLeft: '10%',
+    paddingRight: '10%',
     textAlign: 'left',
+    
   },
 
-  
+  project_grid: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    gap: '20px',
+   
+  },
+
+  projectContainer:{
+    backgroundColor: "black",
+    
+    marginTop: "4rem", //mellanrum mellan projekten
+    marginBottom: "1rem",
+    
+
+  },
+
+  imageContainer:{
+    paddingBottom: "1rem",
+    paddingTop: "2rem",
+    flexShrink: 0, // Förhindrar att bilden skalas ned
+    width: '300px', // Fast bredd för bilden
+    height: 'auto', // Behåll proportioner
+   
+  },
+
+  step:{
+    marginTop: "4px",
+  },
+
   links: {
     alignItems: 'left',
   },
@@ -110,12 +172,7 @@ const styles = {
     gridTemplateColumns: 'repeat(auto-fit, 150px)',
     gap: '1rem',
   },
-  project_grid: {
-    display: 'flex',
-    alignItems: 'flex-start',
-    gap: '20px',
-   
-  },
+ 
 
   card: {
    
