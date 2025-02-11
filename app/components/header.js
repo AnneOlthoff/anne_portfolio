@@ -55,7 +55,7 @@ export default function Header() {
       paddingBottom: '8px',
       
       paddingRight: '20px',
-      backgroundColor: '#282727' 
+      backgroundColor: '#131313' 
     },
     links: {
      alignItems: 'left'

@@ -138,12 +138,10 @@ const styles = {
   },
 
   projectContainer:{
-    backgroundColor: "black",
-    
+  
     marginTop: "4rem", //mellanrum mellan projekten
     marginBottom: "1rem",
-    
-
+  
   },
 
   imageContainer:{
