@@ -54,7 +54,7 @@ const styles = {
     border: "none",
     cursor: "pointer",
   },
-  links: (isOpen, boolean) => ({
+  links: (isOpen) => ({
     display: isOpen ? "flex" : "none",
     flexDirection: "column",
     gap: "10px",

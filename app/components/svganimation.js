@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 
-export default function svganimation() {
+export default function Svganimation() {
     const targetRef = useRef(null);
 
     const handleAnimationEnd = () => {

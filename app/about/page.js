@@ -6,16 +6,16 @@ import { useState, useEffect } from "react";
 
 export default function About() {
 
-  const YearsCounter = ({ startYear }) => {
-    const [years, setYears] = useState(0);
+  // const YearsCounter = ({ startYear }) => {
+  //   const [years, setYears] = useState(0);
   
-    useEffect(() => {
-      const currentYear = new Date().getFullYear();
-      setYears(currentYear - startYear);
-    }, [startYear]);
+  //   useEffect(() => {
+  //     const currentYear = new Date().getFullYear();
+  //     setYears(currentYear - startYear);
+  //   }, [startYear]);
   
-    return <span>{years}</span>;
-  };
+  //   return <span>{years}</span>;
+  // };
   
   
     return (
@@ -28,7 +28,7 @@ export default function About() {
           <div style={styles.head}>
 
           <h1> Quick facts</h1>
-          <p> Since it's always fun with some numbers </p>
+          <p> Since it&apos;s always fun with some numbers </p>
 
           </div>
          
@@ -37,7 +37,7 @@ export default function About() {
           
          <div style={styles.fact}>
              <h1> 1 </h1> 
-             <p> One bike since I moved to Linköping, and it's still not stolen</p>
+             <p> One bike since I moved to Linköping, and it&apos;s still not stolen</p>
        
           </div>
           <div style={styles.fact}>

@@ -2,7 +2,7 @@
 
 import Head from 'next/head';
 //import { ReactComponent as Logo } from "./assets/testlogga.svg"; // Importera SVG som React-komponent
-import Logo from "./assets/testlogga_line.svg";
+
 
 import Header from './components/header';
 import Projects from './components/projects';
@@ -31,7 +31,3 @@ export default function Home() {
     </>
   );
 }
-const styles = {
- 
- 
-};

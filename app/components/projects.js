@@ -20,9 +20,6 @@ export default function Projects() {
   }, []);
 
   
-
-  const router = useRouter();
-  const pathname = usePathname();
   //const data = JSON.parse(file);
    
   // Lägg till referenser för varje sektion
@@ -71,7 +68,7 @@ export default function Projects() {
           <div style={styles.project_grid}>
           <p>
           {project.images.map((image, secIndex) => (
-            <div  style={styles.imageContainer}>
+            <div key={secIndex} style={styles.imageContainer}>
             <Image
                 src={image.image || '/default-image.jpg'}
                 alt={image.title || 'Project Image'}
