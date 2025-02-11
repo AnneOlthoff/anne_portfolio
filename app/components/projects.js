@@ -1,7 +1,6 @@
 'use client';
 import { usePathname, useRouter } from 'next/navigation';
 import {useState, useEffect, useRef} from 'react'
-import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Projects() {
