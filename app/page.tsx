@@ -7,7 +7,7 @@ import Head from 'next/head';
 import Header from './components/header';
 import Projects from './components/projects';
 import Footer from './components/footer';
-import SVGAnimation from './components/svganimation'
+import SVGAnimation from './components/svganimation';
 
 export default function Home() {
 
@@ -23,7 +23,7 @@ export default function Home() {
       
         <SVGAnimation/>
         
-        <div id="my-work" >
+        <div id="my-work" style={{marginTop: '4px'}}  >
            <Projects/>
         </div>
         <Footer />

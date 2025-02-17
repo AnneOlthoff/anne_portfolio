@@ -89,8 +89,7 @@ const styles = {
   container: {
     display: 'flex',
    flexDirection: 'column',
-   minHeight: '100vh',
-   
+   minHeight: '100vh'
   },
   
   main: {
@@ -98,7 +97,7 @@ const styles = {
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
-    height: '100%'
+    
   },
   content: {
     flex: 1,

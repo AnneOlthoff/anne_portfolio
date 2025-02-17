@@ -11,11 +11,15 @@
        
       ],
       "heading": "Implementaion and Designing a simple portfolio",
-      "subheading": "A Project for larning more about react (2024)",
+      "subheading": "A Project for learning more about react (2024)",
       "introduction": "This webpage is a space where you can get a quick and honest impression of who I am and the work I do. My focus has been on creating a simple and intuitive design without relying on unnecessary animations or flashy distractions. Instead, I’ve built this portfolio to reflect my passion for simplicity, clarity, and functionality.",
 
      
       "sections": [
+        {
+          "title" : "Overview",
+          "content": "This webpage is a space where you can get a quick and honest impression of who I am and the work I do. I’ve focused on keeping the design simple and intuitive, avoiding excessive CSS animations —but I couldn't resist adding a playful SVG animation of a logo."
+        },
         {
           "title" : "Design Process",
           "content": "I have designed this page naturally, drawing inspiration from others and selecting elements that align with my three guiding principles: simplicity, clarity, and efficiency.",
@@ -28,8 +32,16 @@
        
         },
         {
-          "title" : "Code Behind the Scenes",
-          "content": "Every part of this portfolio is built using React, and Next.js. Building this portfolio has been a learning journey, where I’ve honed my skills in React while keeping the design and functionality aligned with my principles of simplicity, clarity, and efficiency."
+          "title" : "Creating the webb page, using React",
+          "content": "Every part of this portfolio is built using React and Next.js. Building this portfolio has been a learning journey, where I’ve honed my skills in React while keeping the design and functionality aligned with my principles of simplicity, clarity, and efficiency. "
+        },
+        {
+          "title": "Skills Highlighted",
+          "steps": [
+            "User experience (UX)",
+            "SVG-animations",
+            "Front-end development with React"
+          ]
         }
       ]
       
@@ -49,7 +61,6 @@
       "what": "OpenSpace",
       "heading": "Interactive Visualization of Climate Change in the OpenSpace Project",
       "subheading": "Master’s Thesis, Linköping University at New York University (2022) ",
-      "introduction": "For my master’s thesis, I designed and developed an interactive graphical user interface (GUI) to visualize climate change on Earth’s surface, with a specific focus on the melting glaciers of Antarctica. This project was part of the international OpenSpace initiative, a collaboration involving universities, research institutions, and NASA.",
       "sections": [
         {
           "title": "Overview",

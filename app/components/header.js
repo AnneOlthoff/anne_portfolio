@@ -14,7 +14,7 @@ export default function Header() {
     e.preventDefault();
     if (pathname === '/') {
       // Scrolla till sektionen om vi är på startsidan
-      document.querySelector('#my-work').scrollIntoView({ behavior: 'smooth' });
+      document.querySelector('#my-work').scrollIntoView({ behavior: 'smooth'});
     } else {
       // Navigera till startsidan först
       router.push('/#my-work');
