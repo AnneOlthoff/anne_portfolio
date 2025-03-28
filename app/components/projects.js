@@ -76,7 +76,7 @@ export default function Projects() {
                     {section.steps && (
                       <ul>
                         {section.steps.map((step, stepIndex) => (
-                          <li key={stepIndex} style={styles.step}>{step}</li>
+                          <li key={stepIndex} style={styles.step}>{"• " + step}</li>
                         ))}
                       </ul>
                     )}

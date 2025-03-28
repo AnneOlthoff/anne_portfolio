@@ -53,6 +53,7 @@ export default function About() {
           </div>
 
           </div> 
+          
           <div  style={styles.row}>
           
        
@@ -117,12 +118,12 @@ const styles = {
     flexWrap: 'wrap',
     gap: '2rem',
     
-    
   },
   head: {
     flex: 1,
     minWidth: '300px',
     flexWrap: 'wrap',
+    gap: '20rem',
 
   }, 
   
@@ -132,6 +133,9 @@ const styles = {
     minWidth: '200px',
     position: 'relative',
     flexWrap: 'wrap',
+    
+    
+    
 
   },
 

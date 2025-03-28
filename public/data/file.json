@@ -3,6 +3,81 @@
   "projects": [
     {
       "id": 1,
+      "what": "Graphs for smal screens",
+      "images": [
+        {
+          "image": "/images/analys.png"
+        },
+        {
+          "image": "/images/datepicker.png"
+        }
+       
+      ],
+      "heading": "Designing graphs for smal screens",
+      "subheading": "Optimizing Data Visualization for an Electrical Consumption App",
+      "introduction": "When designing a mobile-friendly energy consumption graph, several key decisions shaped the final outcome:",
+     
+      "sections": [
+        {
+          "title" : "Overview",
+          "content": "One of the key pages in an electrical consumption app is where users can monitor their energy usage and costs. While users want insights into their consumption habits across different time periods—ranging from hourly to yearly—electricity companies also aim to help them recognize patterns and adjust their behaviors. This presents a design challenge: how can we create a clear, accessible, and engaging graph that serves both perspectives while remaining easy to use on small screens? "
+          
+        },
+        {
+          "title" : "1. Choosing the Right Graph Type",
+          "content": "After exploring several options, we settled on a step graph as the most suitable choice. It blends the advantages of line and bar graphs, providing clarity and a more interactive experience without misrepresenting the data.",
+          
+          "steps": [
+            "A line graph implies continuous data, which is inaccurate when visualizing hourly electricity readings.",
+            "A bar graph can feel rigid and harder to navigate, especially on mobile.",
+             "A step graph offers a clear and intuitive representation of discrete hourly values, making patterns easy to spot."
+          
+          ]
+        },
+        {
+          "title" : "2. Improving Data Readability on Mobile",
+          "content": "Traditional tooltips often obstruct the view and are tricky to use on touchscreens. To solve this, we implemented large, fixed-position data values that remain visible without interaction, ensuring that key information is easily accessible even when navigating with thumbs.",
+          "steps": [   
+              ]
+       
+        },
+        {
+          "title" : "3.  Comparing Different Data Types Without Overload",
+          "content": "Users needed to compare both electricity consumption (kWh) and cost per kWh within the same graph. However, multi-variable graphs risk becoming overwhelming. To balance clarity and functionality:",
+          "steps": [   
+           "We introduced dual Y-axes with matching visual styles.",
+           "Users can choose to toggle comparison data, keeping the default view simple for less advanced users while still enabling deeper insights for those who want them. "
+            ]
+       
+        },
+        {
+          "title" : "4. Enhancing Readability Through Visual Design",
+          "content": "To clearly separate datasets:",
+          "steps": [   
+           "The main consumption line features a subtle gradient to give it depth without distraction.",
+           "Comparison lines use a white border to remain distinct even when colors overlap, without introducing additional gradients or noise.",
+           "Color choices were made with accessibility in mind, ensuring that all users — including those with color vision deficiencies — can clearly interpret the data.", 
+           "Additionally, to ensure accessibility for users with color vision deficiencies, we introduced small graphical markers (circles and squares) on both the graph lines and the corresponding data labels."
+                 ]
+       
+        },
+        {
+          "title" : "5. The date picker for the graph",
+          "content": "We also designed a date picker tailored for mobile use, enabling users to easily switch between day, week, month, and year views. It adapts seamlessly to small screens and allows users to explore historical data without friction. "
+        },
+        {
+          "title": "Skills Highlighted",
+          "steps": [
+            "User experience (UX)",
+            "Data Visualization",
+            "Accesability"
+          ]
+        }
+      ]
+      
+    },
+    {
+      "id": 1,
       "what": "Simple Porfolio",
       "images": [
         {
