@@ -28,16 +28,14 @@
           "content": "After exploring several options, we settled on a step graph as the most suitable choice. It blends the advantages of line and bar graphs, providing clarity and a more interactive experience without misrepresenting the data.",
           
           "steps": [
-            "A line graph implies continuous data, which is inaccurate when visualizing hourly electricity readings.",
-            "A bar graph can feel rigid and harder to navigate, especially on mobile.",
-             "A step graph offers a clear and intuitive representation of discrete hourly values, making patterns easy to spot."
-          
+            "A line graph suggests continuous data, which doesn’t accurately represent hourly electricity readings where each hour should be treated as a discrete point on the x-axis. However, one advantage of line graphs is that they feel more interactive, inviting users to naturally drag along the curve with their fingers, especially on mobile.",
+            "A bar graph visualizes discrete data more correctly, clearly separating each hourly value. On the downside, bars tend to feel more static and can make touch interactions less smooth, especially on smaller screens, where hovering or selecting with precision becomes harder.",
+            "By combining the advantages of both, a step graph became the optimal choice. It offers the structural clarity of bars while maintaining the inviting, interactive feel of a line graph. This makes it easy for users to recognize consumption patterns and navigate the data seamlessly on mobile devices."
           ]
         },
         {
           "title" : "2. Improving Data Readability on Mobile",
-          "content": "Traditional tooltips often obstruct the view and are tricky to use on touchscreens. To solve this, we implemented large, fixed-position data values that remain visible without interaction, ensuring that key information is easily accessible even when navigating with thumbs.",
-          "steps": [   
+          "content": "Traditional tooltips are commonly used in graphs to display data when hovering, but this pattern does not translate well to mobile apps. On touchscreens, tooltips often end up hidden behind the user’s finger, making them difficult to read. To avoid covering too much of the graph, tooltip text also tends to be small, which further reduces legibility. To solve this, we implemented large, fixed-position data values that remain visible without requiring interaction, ensuring that key information is easy to read — even when navigating with thumbs.",   "steps": [   
               ]
        
         },
