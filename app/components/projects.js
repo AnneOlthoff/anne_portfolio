@@ -93,7 +93,9 @@ export default function Projects() {
         <div style={styles.modalOverlay} onClick={() => setSelectedImage(null)}>
           <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <Image src={selectedImage} alt="Enlarged Project Image"  width={600}
-                height={600}  />
+                height={100} 
+                style={{ objectFit: "contain", width: "100%", height: "auto", maxHeight: "80vh" }}
+      />
             <button style={styles.closeButton} onClick={() => setSelectedImage(null)}>✕</button>
           </div>
         </div>
@@ -159,8 +161,8 @@ const styles = {
     position: 'fixed',
     top: 0,
     left: 0,
-    width: '100%',
-    height: '100%',
+    width: "100vw",
+    height: "100vh",
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
     display: 'flex',
     alignItems: 'center',
