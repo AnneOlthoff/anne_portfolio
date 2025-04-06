@@ -27,8 +27,7 @@ export default function About() {
           <div style={styles.head}>
 
           <h1> Quick facts</h1>
-          <p> Since it&apos;s always fun with some numbers </p>
-
+          <p> Hi! I'm Anne, a UX Designer and Engineer currently based in Linköping, Sweden. I'm passionate about creating intuitive and functional user experiences and am now planning my next chapter in Berlin.</p>       <p> And of course, I believe in the power of numbers and data to tell compelling stories—so let&apos;s explore those too!</p>
           </div>
          
          <div style = {styles.facts}>
@@ -63,7 +62,7 @@ export default function About() {
           </div>
           <div style={styles.fact} >
             <h1> 5 </h1> 
-             <p> I have lived in five different citties </p>
+             <p> I have lived in five different cities </p>
 
           </div>
 
