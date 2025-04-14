@@ -27,7 +27,9 @@ export default function About() {
           <div style={styles.head}>
 
           <h1> Quick facts</h1>
-          <p> Hi! I'm Anne, a UX Designer and Engineer currently based in Linköping, Sweden. I'm passionate about creating intuitive and functional user experiences and am now planning my next chapter in Berlin.</p>       <p> And of course, I believe in the power of numbers and data to tell compelling stories—so let&apos;s explore those too!</p>
+             
+          <p> Hi! I&apos;m Anne, a UX Designer and Engineer currently based in Linköping, Sweden. I&apos;m passionate about creating intuitive and functional user experiences and am now planning my next chapter in Berlin.</p>    
+             <p> And of course, I believe in the power of numbers and data to tell compelling stories—so let&apos;s explore those too!</p>
           </div>
          
          <div style = {styles.facts}>
