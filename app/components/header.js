@@ -56,6 +56,8 @@ export default function Header() {
       
       paddingRight: '20px',
       backgroundColor: 'var(--background-secondary)',
+      borderBottom: '1px solid var(--divider-color)',
+      
     
     },
     links: {

@@ -153,8 +153,8 @@ const styles = {
   card: {
     borderRadius: '8px',
     padding: '8px',
-    backgroundColor: 'var(--background-secondary)',
-    color: 'var( --text-color-secondary)',
+    backgroundColor: 'var(--background-third)',
+    color: 'var( --foreground)',
     cursor: 'pointer',
   },
   modalOverlay: {

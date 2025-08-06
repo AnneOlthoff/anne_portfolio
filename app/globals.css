@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #eeebe7;
-  --background-secondary: rgb(243, 241, 240);
-  --foreground: #052d29;
-  --text-color-secondary:  #145c55;
+  --background: #faf9f6;
+  --background-secondary: #faf9f6;
+  --background-third: #fdfdfd;
+  --foreground: #18645c;
+  --text-color-secondary:  #07312d;
+  --divider-color: #d9d4ce;
+  
 
  
   
@@ -15,15 +18,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --background-secondary: #131313;
+    --background-secondary: #191919;
+    --background-third:  #191919;
     --foreground: #ededed;
    
     --text-color-secondary: #E9E9E9;
-
-    --color-bg: #0a0a0a;
-    --color-text: #ededed;
-    --color-link: #ffffff;
-
+    --divider-color: #0a0a0a; /* mörkare i dark mode */
   }
   
 }

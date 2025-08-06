@@ -13,7 +13,7 @@ export default function Footer() {
       textAlign: 'center',
       backgroundColor: 'var(--background-secondary)',
       marginTop: '2rem',
-
+      borderTop: '1px solid var(--divider-color)',
      
         
       
