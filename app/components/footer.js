@@ -11,7 +11,7 @@ export default function Footer() {
     footer: {
       padding: '1rem',
       textAlign: 'center',
-      backgroundColor: '#131313',
+      backgroundColor: 'var(--background-secondary)',
       marginTop: '2rem',
 
      

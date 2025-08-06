@@ -3,11 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #eeebe7;
+  --background-secondary: rgb(243, 241, 240);
+  --foreground: #052d29;
+  --text-color-secondary:  #145c55;
+
+ 
+  
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --background-secondary: #131313;
+    --foreground: #ededed;
+   
+    --text-color-secondary: #E9E9E9;
 
+    --color-bg: #0a0a0a;
+    --color-text: #ededed;
+    --color-link: #ffffff;
+
+  }
+  
+}
 
 body {
   color: var(--foreground);
@@ -17,28 +36,38 @@ body {
 
 h1 {
 	font-size: 4em; 
+  color: var(--foreground);
   
 }
 h2 {
 	font-size: 28px; 
   font-weight: 400;
+  color: var(--foreground);
 }
 h3 {
   font-size: 20px;
   margin-top: 1rem;
 
   font-weight: 600;
+  color: var(--foreground);
 }
 h4{
   font-size: 18px;
   font-style: italic;
-  color: #E9E9E9;
+  color: var(--text-color-secondary, var(--foreground));
+  
 }
 p{
-  color: #E9E9E9;
+  
+  color: var(--text-color-secondary, var(--foreground));
+  
 }
 
-	
+ul{
+   color: var(--text-color-secondary, var(--foreground));
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

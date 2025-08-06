@@ -55,7 +55,8 @@ export default function Header() {
       paddingBottom: '8px',
       
       paddingRight: '20px',
-      backgroundColor: '#131313' 
+      backgroundColor: 'var(--background-secondary)',
+    
     },
     links: {
      alignItems: 'left'
@@ -73,7 +74,7 @@ export default function Header() {
     },
     link: {
       margin: '0 0.5rem',
-      color: 'white',
+      color: 'var( --text-color-secondary)',
       textDecoration: 'none',
     },
    
