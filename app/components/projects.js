@@ -115,7 +115,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'flex-start',
-    gap: '20px',
+    gap: '8px',
     flexWrap: 'wrap',
   },
   imageColumn: {

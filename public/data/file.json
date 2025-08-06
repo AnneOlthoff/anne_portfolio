@@ -1,8 +1,82 @@
 
 {
   "projects": [
-    {
+
+
+     {
       "id": 1,
+      "what": "White-label app",
+      "images": [
+        {
+          "image": "/images/malar_light.png"
+        },
+        {
+          "image": "/images/malar_blue.png"
+        },
+        {
+          "image": "/images/malar_final.png"
+        }
+       
+      ],
+      "heading": "Designing for Everyone: White-label UX with a Personal Touch",
+      "subheading": "Balancing customization, consistency, and accessibility",
+      "introduction": "When designing a mobile-friendly energy consumption graph, several key decisions shaped the final outcome:",
+     
+      "sections": [
+        {
+          "title" : "Overview",
+          "content": "Bitvis offers a white-label app for electricity retailers in Sweden, designed to make each end customer feel seen and prioritized. This required an interface that felt personal and on-brand, without fragmenting the core product or adding complexity. Each retailer had its own view of customer needs, which gave us valuable, ongoing user feedback. The challenge: How do you create a tailored experience for each client while maintaining consistency, accessibility, and ease of maintenance?"
+ 
+          
+        },
+        
+        {
+          "title" : "A Modular Foundation with Flexible Branding for a “Homely” Experience",
+          "content": "Each retailer had unique brand requirements — from color schemes and typography to tone of voice, as well as their own feature requests. To support this, we introduced a design system built around:",
+          "steps": [
+          "Customizable design tokens for colors, typography, and spacing",
+          "Figma variables to quickly create and present tailored design drafts — as seen to the left, where we explored three brand themes for the same customer.",
+          "A modular app architecture that allows smaller feature add-ons to highlight each retailer’s unique services"
+          ]
+        },
+        {
+          "title" : "Prioritizing Accessibility Across Custom Themes",
+          "content": "Different color schemes and branding requirements introduced a risk: inconsistent contrast ratios or color combinations that could fail accessibility standards — especially as smaller electricity retailers often had graphical brand books with colors that weren’t ideal for user interfaces or WCAG AA compliance. To maintain accessibility:",
+          "steps": [
+            "Every theme variant was tested for color blindness compatibility and AA compliance",
+            "When needed, we created new color schemes that still preserved the 'homely' brand feel"
+            ]
+            
+        },
+        {
+          "title" : "Scaling Design with Frontend Collaboration",
+          "content": "Design and development worked closely to ensure the white-label system was scalable and maintainable. Every new component was tested across multiple customer themes to ensure it worked seamlessly with minimal need for special treatment per electricity retailer."
+       
+        },
+        {
+          "title": "Skills Highlighted",
+          "steps": [
+            "Design systems",
+            "Accessibility ",
+            "White-label product design",
+            "Designing for a B2B system",
+            "UX consistency across clients"
+          ]
+        }
+      ]
+      
+    },
+
+
+
+
+
+
+
+
+
+    {
+      "id": 2,
       "what": "Graphs for smal screens",
       "images": [
         {
@@ -75,7 +149,7 @@
       
     },
     {
-      "id": 1,
+      "id": 3,
       "what": "Simple Porfolio",
       "images": [
         {
@@ -121,7 +195,7 @@
     },
 
     {
-      "id": 2,
+      "id": 4,
       "images":[
         {
           "image": "/images/introduction_blue.png"
