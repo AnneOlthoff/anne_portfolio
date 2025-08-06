@@ -178,6 +178,11 @@
           ]
        
         },
+         {
+          "title" : "Colors and Theme Adaptation",
+          "content": "The color palette of this portfolio adapts automatically to the visitor’s system theme, creating a smoother and more comfortable experience whether in light or dark mode. This avoids the jarring effect of suddenly landing on a bright page when browsing in dark mode, or a dark page when in light mode. In light mode, the design features a warm beige background and deep green text, chosen for their softness and readability. These same colors are also used in my CV to maintain a consistent and calming visual identity across materials. The dark mode version offers high contrast while remaining easy on the eyes, staying true to my design principles of clarity, simplicity, and efficiency."
+        
+        },
         {
           "title" : "Creating the webb page, using React",
           "content": "Every part of this portfolio is built using React and Next.js. Building this portfolio has been a learning journey, where I’ve honed my skills in React while keeping the design and functionality aligned with my principles of simplicity, clarity, and efficiency. "
