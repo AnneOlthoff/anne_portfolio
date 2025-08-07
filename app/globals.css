@@ -6,8 +6,9 @@
   --background: #faf9f6;
   --background-secondary: #faf9f6;
   --background-third: #fdfdfd;
-  --foreground: #18645c;
-  --text-color-secondary:  #07312d;
+  --heading: #18645c;
+  --heading-secondary: #062c29;
+  --text:  #07312d;
   --divider-color: #d9d4ce;
   
 
@@ -20,51 +21,58 @@
     --background: #0a0a0a;
     --background-secondary: #191919;
     --background-third:  #191919;
-    --foreground: #ededed;
-   
-    --text-color-secondary: #E9E9E9;
+    --heading: #fbfbfb;
+    --heading-secondary: #ffffff;
+    --text: #E9E9E9;
     --divider-color: #0a0a0a; /* mörkare i dark mode */
   }
   
 }
 
 body {
-  color: var(--foreground);
+  color: var(--heading);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
 	font-size: 4em; 
-  color: var(--foreground);
+  color: var(--heading);
   
 }
 h2 {
 	font-size: 28px; 
   font-weight: 400;
-  color: var(--foreground);
+  color: var(--heading);
 }
 h3 {
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 1rem;
 
   font-weight: 600;
-  color: var(--foreground);
+  color: var(--heading);
 }
 h4{
   font-size: 18px;
+  font-weight: 600;
+  color: var(--heading-secondary, var(--heading));
+  
+}
+h5{
+  font-size: 18px;
   font-style: italic;
-  color: var(--text-color-secondary, var(--foreground));
+  font-weight: 500;
+  color: var(--heading-secondary, var(--heading));
   
 }
 p{
   
-  color: var(--text-color-secondary, var(--foreground));
+  color: var(--text, var(--heading));
   
 }
 
 ul{
-   color: var(--text-color-secondary, var(--foreground));
+   color: var(--text, var(--heading));
 }
 
 

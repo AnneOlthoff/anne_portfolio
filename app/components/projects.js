@@ -51,7 +51,7 @@ export default function Projects() {
         {data.map((project, index) => (
           <div key={index} ref={addToRefs} style={styles.projectContainer}>
             <h2>{project.heading}</h2>
-            <h4>{project.subheading}</h4>
+            <h5>{project.subheading}</h5>
             <br />
             <div style={styles.project_grid}>
               <div style={styles.imageColumn}>
@@ -59,10 +59,10 @@ export default function Projects() {
                   <div key={secIndex} style={styles.imageContainer}>
                     <Image
                       src={image.image || '/default-image.jpg'}
-                      alt={image.title || 'Project Image'}
+                      alt={image.imcap || 'Project Image'}
                       width={300}
                       height={300}
-                      onClick={() => setSelectedImage(image.image)}
+                      onClick={() => setSelectedImage(image)}
                       style={{ cursor: 'pointer' }}
                     />
                   </div>
@@ -72,7 +72,24 @@ export default function Projects() {
                 {project.sections.map((section, secIndex) => (
                   <div key={secIndex} style={styles.step}>
                     <h3>{section.title}</h3>
-                    <p>{section.content}</p>
+                    <p>{section.sectionOne}</p>
+
+                    {/* Underrubriker (t.ex. för design process) */}
+                    {section.subsections && section.subsections.map((sub, subIndex) => (
+                      <div key={subIndex} style={styles.step}>
+                        <h4>{sub.title}</h4>
+                        <p>{sub.sectionOne}</p>
+                         {section.steps && (
+                        <ul>
+                          {section.subSteps.map((step, stepIndex) => (
+                            <li key={stepIndex} style={styles.step}>{"• " + step}</li>
+                          ))}
+                        </ul>
+                        )}
+                         <p>{sub.sectionTwo}</p>
+                      </div>
+                    ))}
+
                     {section.steps && (
                       <ul>
                         {section.steps.map((step, stepIndex) => (
@@ -80,6 +97,7 @@ export default function Projects() {
                         ))}
                       </ul>
                     )}
+                     <p>{section.sectionTwo}</p>
                   </div>
                 ))}
               </div>
@@ -92,10 +110,17 @@ export default function Projects() {
       {selectedImage && (
         <div style={styles.modalOverlay} onClick={() => setSelectedImage(null)}>
           <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-            <Image src={selectedImage} alt="Enlarged Project Image"  width={600}
+            <Image src={selectedImage.image}
+                alt={selectedImage.imcap || 'Enlarged Project Image'} 
+                width={600}
                 height={100} 
                 style={{ objectFit: "contain", width: "100%", height: "auto", maxHeight: "80vh" }}
-      />
+            />
+            {/* Här visas titeln eller en fallback */}
+            {selectedImage.imcap && (
+              <p style={styles.imcap}>{selectedImage.imcap}</p>
+            )}
+            
             <button style={styles.closeButton} onClick={() => setSelectedImage(null)}>✕</button>
           </div>
         </div>
@@ -171,12 +196,21 @@ const styles = {
   modalContent: {
     position: 'relative',
     padding: '1rem',
-    background: '#131313',
+    background: 'var(--background)',
     borderRadius: '8px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    width: '100%', 
+    maxWidth: '800px' 
     
+    
+  },
+   imcap: {
+    textAlign: 'left',
+    paddingTop: '1rem' , 
+    maxWidth: '100%',
+    wordWrap: 'break-word'
   },
   closeButton: {
     position: 'absolute',
