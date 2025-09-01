@@ -4,20 +4,26 @@
 
 
     {
-      "id": 1,
+      "id": "1",
       "what": "White-label app",
       "images": [
         {
           "image": "/images/malar_light.png",
-          "imcap": "Drafts of a ligher version for Mälarenergi, focusing on using there primary blue and secondary orange on grapichs and as texts."
+          "imcap": "Drafts of a ligher version for Mälarenergi, focusing on using there primary blue and secondary orange on grapichs and as texts.",
+          "height": 5255,
+          "width": 2629
         },
         {
           "image": "/images/malar_blue.png",
-          "imcap": "Draft of a darker version for Mälarenergi using a deeper blue for better contrast with their secondary orange witch is WCAG AA compliant."
+          "imcap": "Draft of a darker version for Mälarenergi using a deeper blue for better contrast with their secondary orange witch is WCAG AA compliant.",
+          "height": 5255,
+          "width": 2629
         },
         {
           "image": "/images/malar_final.png",
-          "imcap": "Picked draft: mainly using wine red and deeper blue to follow their design guidelines while maximizing contrast."
+          "imcap": "Picked draft: mainly using wine red and deeper blue to follow their design guidelines while maximizing contrast.",
+          "height": 5255,
+          "width": 2629
         }
        
       ],
@@ -79,16 +85,20 @@
 
 
     {
-      "id": 2,
+      "id": "2",
       "what": "Graphs for small screens",
       "images": [
         {
           "image": "/images/analys.png",
-          "imcap": "Step graph with optional secondary graph to compare, e.g., prices and purchased electricity. "
+          "imcap": "Step graph with optional secondary graph to compare, e.g., prices and purchased electricity. ",
+          "height": 400,
+          "width": 200
         },
         {
           "image": "/images/datepicker.png",
-          "imcap": "Users first choose a time interval (day, month, or year), then select a specific period to view in the graph."
+          "imcap": "Users first choose a time interval (day, month, or year), then select a specific period to view in the graph.",
+          "height": 400,
+          "width": 200
         }
        
       ],
@@ -154,12 +164,14 @@
       
     },
     {
-      "id": 3,
+      "id": "3",
       "what": "Simple Porfolio",
       "images": [
         {
           "image": "/images/logga.svg",
-          "imcap": "SVG animation doubling as a personal line art logo. One continuous line writes my name, with the surrounding box symbolizing the 'O' in my surname. "
+          "imcap": "SVG animation doubling as a personal line art logo. One continuous line writes my name, with the surrounding box symbolizing the 'O' in my surname. ",
+          "height": 400,
+          "width": 800
         }
        
       ],
@@ -206,24 +218,32 @@
     },
 
     {
-      "id": 4,
+      "id": "4",
       "what": "OpenSpace",
       "images":[
         {
           "image": "/images/firstdraft.png",
-          "imcap": "Early interface concept showing Earth always in view, with narrative text anchored to the side. The layout was designed to support both immersion and readability."
+          "imcap": "Early interface concept showing Earth always in view, with narrative text anchored to the side. The layout was designed to support both immersion and readability.",
+          "height": 400,
+          "width": 800
         },
          {
           "image": "/images/storyline.png",
-          "imcap": "First draft over the storyline when Antarctica is picked: (1) Satellites, (2) Overview of surface currents, (3) A more detailed view of the surface currents, (4) Overview on how the ice melts over Antarctica, (5) Glaciers, (6) Consequences"
+          "imcap": "First draft over the storyline when Antarctica is picked: (1) Satellites, (2) Overview of surface currents, (3) A more detailed view of the surface currents, (4) Overview on how the ice melts over Antarctica, (5) Glaciers, (6) Consequences",
+          "height": 400,
+          "width": 800
         },
         {
           "image": "/images/introduction_blue.png",
-          "imcap": "The starting page of the interface is were the user can pick a story. When the program starts the instruction button in the left corner in blinking to get the user’s attention." 
+          "imcap": "The starting page of the interface is were the user can pick a story. When the program starts the instruction button in the left corner in blinking to get the user’s attention." ,
+          "height": 400,
+          "width": 800
         },
         {
           "image": "/images/grace.png",
-          "imcap": "Visualization of ice melt over time using GRACE data. Colors indicate changes in ice mass, with blue and orange chosen to represent loss and gain due to their better accessibility for color blindness. The color legend helps interpret the intensity of melting."
+          "imcap": "Visualization of ice melt over time using GRACE data. Colors indicate changes in ice mass, with blue and orange chosen to represent loss and gain due to their better accessibility for color blindness. The color legend helps interpret the intensity of melting.",
+          "height": 400,
+          "width": 800
         }
        
       ],

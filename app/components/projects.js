@@ -1,11 +1,17 @@
 'use client';
+// components/projects.js
+import Link from 'next/link';
+
+
+
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
+
 export default function Projects() {
   const [data, setData] = useState([]);
-  const sectionsRefs = useRef([]);
-  const [selectedImage, setSelectedImage] = useState(null);
+
+ 
 
   useEffect(() => {
     fetch('/data/file.json') // Stig till filen i public-mappen
@@ -17,15 +23,7 @@ export default function Projects() {
       .catch((error) => console.error('Error loading JSON:', error));
   }, []);
 
-  const addToRefs = (el) => {
-    if (el && !sectionsRefs.current.includes(el)) {
-      sectionsRefs.current.push(el);
-    }
-  };
-
-  const scrollToSection = (index) => {
-    sectionsRefs.current[index]?.scrollIntoView({ behavior: 'smooth' });
-  };
+ 
 
   return (
     <section style={styles.container}>
@@ -34,97 +32,25 @@ export default function Projects() {
         <p>Learn more about where I am today and how I got here. Check out some of my small projects or my university thesis – and stay tuned, as more projects will be added soon!</p>
       </div>
       
-      <div style={styles.grid}>
-        {data.map((project, index) => (
-          <button
-            key={project.id}
-            onClick={() => scrollToSection(index)}
-            style={styles.card}
-          >
-            {project.what}
-          </button>
-        ))}
-      </div>
+      
       <br />
 
-      <div style={styles.projects}>
-        {data.map((project, index) => (
-          <div key={index} ref={addToRefs} style={styles.projectContainer}>
-            <h2>{project.heading}</h2>
-            <h5>{project.subheading}</h5>
-            <br />
-            <div style={styles.project_grid}>
-              <div style={styles.imageColumn}>
-                {project.images.map((image, secIndex) => (
-                  <div key={secIndex} style={styles.imageContainer}>
-                    <Image
-                      src={image.image || '/default-image.jpg'}
-                      alt={image.imcap || 'Project Image'}
-                      width={300}
-                      height={300}
-                      onClick={() => setSelectedImage(image)}
-                      style={{ cursor: 'pointer' }}
-                    />
-                  </div>
-                ))}
-              </div>
-              <div style={styles.textColumn}>
-                {project.sections.map((section, secIndex) => (
-                  <div key={secIndex} style={styles.step}>
-                    <h3>{section.title}</h3>
-                    <p>{section.sectionOne}</p>
+     
 
-                    {/* Underrubriker (t.ex. för design process) */}
-                    {section.subsections && section.subsections.map((sub, subIndex) => (
-                      <div key={subIndex} style={styles.step}>
-                        <h4>{sub.title}</h4>
-                        <p>{sub.sectionOne}</p>
-                         {section.steps && (
-                        <ul>
-                          {section.subSteps.map((step, stepIndex) => (
-                            <li key={stepIndex} style={styles.step}>{"• " + step}</li>
-                          ))}
-                        </ul>
-                        )}
-                         <p>{sub.sectionTwo}</p>
-                      </div>
-                    ))}
 
-                    {section.steps && (
-                      <ul>
-                        {section.steps.map((step, stepIndex) => (
-                          <li key={stepIndex} style={styles.step}>{"• " + step}</li>
-                        ))}
-                      </ul>
-                    )}
-                     <p>{section.sectionTwo}</p>
-                  </div>
-                ))}
-              </div>
+        <div>
+          {data.map(project => (
+            <div key={project.id}>
+              <h2>{project.title}</h2>
+              <p>{project.introduction}</p>
+              <Link href={`/project/${project.id}`}>Läs mer</Link>
             </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Image Popup Modal */}
-      {selectedImage && (
-        <div style={styles.modalOverlay} onClick={() => setSelectedImage(null)}>
-          <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-            <Image src={selectedImage.image}
-                alt={selectedImage.imcap || 'Enlarged Project Image'} 
-                width={600}
-                height={100} 
-                style={{ objectFit: "contain", width: "100%", height: "auto", maxHeight: "80vh" }}
-            />
-            {/* Här visas titeln eller en fallback */}
-            {selectedImage.imcap && (
-              <p style={styles.imcap}>{selectedImage.imcap}</p>
-            )}
-            
-            <button style={styles.closeButton} onClick={() => setSelectedImage(null)}>✕</button>
-          </div>
+          ))}
         </div>
-      )}
+      
+
+
+      
     </section>
   );
 }
@@ -135,6 +61,9 @@ const styles = {
     paddingRight: '10%',
     paddingTop: '3rem',
     textAlign: 'left',
+    maxWidth: '2000px',
+    margin: '0 auto',
+    
   },
   project_grid: {
     display: 'flex',
@@ -142,6 +71,7 @@ const styles = {
     alignItems: 'flex-start',
     gap: '8px',
     flexWrap: 'wrap',
+    
   },
   imageColumn: {
     flex: '1',
@@ -162,6 +92,7 @@ const styles = {
     flexShrink: 0,
     maxWidth: '100%',
     height: 'auto',
+    
   },
   step: {
     marginTop: "4px",
