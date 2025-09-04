@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import '../globals.css'
 
 export default function Projects() {
   const [data, setData] = useState([]);
@@ -53,14 +54,14 @@ export default function Projects() {
             <h2>{project.heading}</h2>
             <h5>{project.subheading}</h5>
             <br />
-            <div style={styles.project_grid}>
+            <div className = 'project_grid'>
               <div style={styles.imageColumn}>
                 {project.images.map((image, secIndex) => (
                   <div key={secIndex} style={styles.imageContainer}>
                     <Image
                       src={image.image || '/default-image.jpg'}
                       alt={image.imcap || 'Project Image'}
-                      width={300}
+                      width={500}
                       height={300}
                       onClick={() => setSelectedImage(image)}
                       style={{ cursor: 'pointer' }}
@@ -134,13 +135,9 @@ const styles = {
     paddingRight: '10%',
     paddingTop: '3rem',
     textAlign: 'left',
-  },
-  project_grid: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    gap: '8px',
-    flexWrap: 'wrap',
+    maxWidth: '1800px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   imageColumn: {
     flex: '1',
@@ -224,16 +221,5 @@ const styles = {
     fontSize: '14px',
     cursor: 'pointer',
   },
-  '@media (max-width: 768px)': {
-    project_grid: {
-      flexDirection: 'column',
-    },
-    imageColumn: {
-      width: '100%',
-      alignItems: 'center',
-    },
-    textColumn: {
-      width: '100%',
-    },
-  },
+  
 };

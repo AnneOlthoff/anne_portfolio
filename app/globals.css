@@ -11,8 +11,6 @@
   --text:  #07312d;
   --divider-color: #d9d4ce;
   
-
- 
   
 }
 
@@ -84,4 +82,21 @@ ul{
 
 html {
   scroll-behavior: smooth;
+}
+
+
+
+.project_grid {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+  .project_grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }
