@@ -79,7 +79,7 @@
 
 
     {
-      "id": 2,
+      "id": 3,
       "what": "Graphs for small screens",
       "images": [
         {
@@ -154,7 +154,55 @@
       
     },
     {
-      "id": 3,
+  "id": 3,
+  "what": "Concept of a Dashboard",
+  "images": [
+    
+    {
+      "image": "/images/powerFlow_components.png",
+      "imcap": "UI components including buttons, graph, and list elements. Created to demonstrate how Power Flow could evolve into a more intuitive and engaging dashboard experience."
+    }
+  ],
+  "heading": "Reimagining Energy Dashboards: A Vision for Power Flow",
+  "subheading": "Designing clarity, emotion, and usability into technical systems",
+  "introduction": "Together with a colleague, I created a visionary concept for Power Flow — a dashboard system used by energy retailers. The goal was to explore how the interface could evolve into something more intuitive, emotionally engaging, and user-friendly. The concept was used in sales and internal discussions to spark ideas and shift focus toward UX-driven development.",
+  "sections": [
+    {
+      "title": "Overview",
+      "sectionOne": "Power Flow was already in use, but the existing product had limited UX and was shaped primarily by technical constraints. Our concept aimed to show what a future version could look like and be used as a conversation starter plus a tool for sales. We focused on real-time energy data, user-friendly visuals, and a warm, approachable tone."
+    },
+    {
+      "title": "Designing with Emotion and Clarity",
+      "sectionOne": "We spoke with current customers to understand what they wanted from a dashboard. Based on their feedback, we designed a layout that combined real-time graphs, map views, and customer lists. To make the interface feel less intimidating, we used pastel tones and soft lilac: colors that stood out in presentations and created a homely, non-technical atmosphere.",
+      "steps": [
+        "Graph panel showing electricity usage, EV charging, and solar production",
+        "Map panel highlighting areas of high consumption",
+        "List view showing customer status and activity",
+        "Interactive buttons and filters designed for clarity and ease of use"
+      ]
+    },
+    {
+      "title": "Sales Integration and Strategic Impact",
+      "sectionOne": "The concept was used in pitch decks and demos to show what Power Flow could become. It helped shift conversations from technical limitations to user-centered possibilities, and positioned our team as UX-driven innovators."
+    },
+    {
+      "title": "Skills Highlighted",
+      "steps": [
+        "Dashboard UX design",
+        "Visual storytelling",
+        "Figma prototyping",
+        "Customer research",
+        "Designing for emotional tone"
+      ]
+    },
+    {
+      "title": "What I Learned",
+      "sectionOne": "Designing visionary concepts is not just about aesthetics, it's about strategic communication. I learned how to use design to spark ideas, support sales, and advocate for better user experiences in technical domains. I also deepened my understanding of how visual tone can influence perception and engagement."
+    }
+  ]
+},
+    {
+      "id": 4,
       "what": "Simple Porfolio",
       "images": [
         {
@@ -206,7 +254,7 @@
     },
 
     {
-      "id": 4,
+      "id": 5,
       "what": "OpenSpace",
       "images":[
         {

@@ -116,7 +116,6 @@ export default function Projects() {
                 height={100} 
                 style={{ objectFit: "contain", width: "100%", height: "auto", maxHeight: "80vh" }}
             />
-            {/* Här visas titeln eller en fallback */}
             {selectedImage.imcap && (
               <p style={styles.imcap}>{selectedImage.imcap}</p>
             )}
@@ -188,7 +187,7 @@ const styles = {
     left: 0,
     width: "100vw",
     height: "100vh",
-    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -203,7 +202,6 @@ const styles = {
     alignItems: 'center',
     width: '100%', 
     maxWidth: '800px' 
-    
     
   },
    imcap: {
