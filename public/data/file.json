@@ -82,13 +82,10 @@
       "id": 3,
       "what": "Graphs for small screens",
       "images": [
+        
         {
-          "image": "/images/analys.png",
-          "imcap": "Step graph with optional secondary graph to compare, e.g., prices and purchased electricity. "
-        },
-        {
-          "image": "/images/datepicker.png",
-          "imcap": "Users first choose a time interval (day, month, or year), then select a specific period to view in the graph."
+          "image": "/images/analysis.png",
+          "imcap": "The step graph allows users to visualize electricity usage over time, with an optional secondary graph for comparisons, for example, prices versus purchased electricity. A datepicker overlay guides users through selecting a time interval (day, month, or year), followed by a specific period to explore in detail."
         }
        
       ],
