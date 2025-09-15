@@ -166,7 +166,7 @@
   "sections": [
     {
       "title": "Overview",
-      "sectionOne": "Power Flow was already in use, but the existing product had limited UX and was shaped primarily by technical constraints. Our concept aimed to show what a future version could look like and be used as a conversation starter plus a tool for sales. We focused on real-time energy data, user-friendly visuals, and a warm, approachable tone."
+      "sectionOne": "Flow is a business-to-business (B2B) customer interface originally designed for fiber network providers. It’s part of an open OSS/BSS system that automates everything from order handling to operational insights—helping companies scale efficiently and cost-effectively. In this project, our challenge was to adapt Flow for a new market: energy retailers. The existing version, known as Power Flow, was already in use, but its user experience was limited and heavily shaped by technical constraints. We wanted to explore what a future version could look like—one that felt intuitive, engaging, and tailored to the needs of energy companies. Our concept was not a finished product, but a vision piece: something to spark conversations, support sales, and shift focus from technical limitations to user-centered possibilities. "
     },
     {
       "title": "Designing with Emotion and Clarity",
@@ -364,7 +364,53 @@
           "sectionOne": "Designing for scientific communication requires careful balance between accuracy and accessibility. I learned how to translate abstract climate data into an intuitive experience, and how to use storytelling as a tool for engagement and education. I also deepened my skills in cross-functional collaboration, working closely with researchers, developers, and museum professionals."
         }
       ]
+    },
+     {
+      "id": 6,
+      "what": "Education",
+      "images":[
+        {
+          "image": "/images/logo_mt.png",
+          "imcap": "Master of Science in Media Technology at Linköping University Logo"
+        }
+        
+      ],
+      
+      "heading": "Master of Science in Media Technology at Linköping University",
+      "subheading": "A broad and interdisciplinary foundation in digital systems, design, and software development. ",
+      "introduction": "A broad and interdisciplinary foundation in digital systems, design, and software development. ",
+      "sections": [
+        {
+          "title": "Overview",
+          "sectionOne": "My Master’s in Media Technology gave me a broad and interdisciplinary foundation in digital systems, design, and software development. The program combined creative and technical perspectives, allowing me to explore everything from graphic design and frontend development to AI, C++ programming, and data visualization."
+        },
+        {
+          "title": "Finding My Focus: Where Design Meets Data and People",
+          "sectionOne": "While I enjoyed the technical breadth of the program, I found myself especially drawn to courses in UX, interaction design, and visualization. I became fascinated by how design can bridge the gap between complex data and human understanding—how interfaces can guide behavior, support decision-making, and create emotional resonance.",
+          "sectionTwo": "One project that stood out involved designing a dashboard for environmental data. It was the first time I saw how layout, hierarchy, and visual tone could turn raw statistics into something meaningful and actionable. That experience sparked my long-term interest in designing tools that simplify complexity and make technology feel more human."
+        },
+       
+        
+      
+        {
+          "title": "Key Skills",
+          "steps": [
+            "UX and interaction design",
+            "Data visualization",
+            "Frontend development (HTML/CSS/JS)",
+            "Programming in C++",
+            "AI and machine learning fundamentals",
+            "Graphic design and visual communication"
+          ]
+        },
+        {
+          "title": "What I Learned",
+          "sectionOne": "My education taught me to see design as a strategic tool—one that connects people, data, and technology. It also gave me the technical confidence to work across disciplines, and the curiosity to keep learning. Today, I bring that mindset into every project: combining structure and empathy, logic and creativity"
+        }
+      ]
     }
+  
   ]
+
 }
 
