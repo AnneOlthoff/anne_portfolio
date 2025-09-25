@@ -79,7 +79,7 @@
 
 
     {
-      "id": 3,
+      "id": 2,
       "what": "Graphs for small screens",
       "images": [
         
@@ -366,12 +366,18 @@
       ]
     },
      {
-      "id": 6,
+      "id": "media-tech-logo",
       "what": "Education",
       "images":[
         {
           "image": "/images/logo_mt.png",
-          "imcap": "Master of Science in Media Technology at Linköping University Logo"
+          "imcap": "Master of Science in Media Technology at Linköping University Logo",
+          "theme": "dark"
+        },
+        {
+          "image": "/images/logo_mt_black.png",
+          "imcap": "Master of Science in Media Technology at Linköping University Logo",
+          "theme": "light"
         }
         
       ],
