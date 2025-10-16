@@ -9,11 +9,13 @@ import Projects from './components/projects';
 import Footer from './components/footer';
 import SVGAnimation from './components/svganimation';
 
+
 export default function Home() {
 
 
   return (
-    <>
+    
+    <div >
       <Head>
         <title>My Portfolio</title>
         <meta name="description" content="Whoo" />
@@ -28,6 +30,7 @@ export default function Home() {
         </div>
         <Footer />
       </div>
-    </>
+      </div>
+   
   );
 }

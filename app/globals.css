@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --background: #faf9f6;
   --background-secondary: #faf9f6;
@@ -30,17 +32,25 @@
 body {
   color: var(--heading);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family: var(--font-inter), sans-serif;
+  
 }
+
+html {
+  font-family: var(--font-merriweather), sans-serif;
+}
+
 
 h1 {
 	font-size: 4em; 
   color: var(--heading);
+  font-weight: 600;
   
 }
 h2 {
 	font-size: 28px; 
-  font-weight: 400;
+  font-weight: 600;
   color: var(--heading);
 }
 h3 {

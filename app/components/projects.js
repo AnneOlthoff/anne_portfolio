@@ -176,7 +176,7 @@ const styles = {
     paddingRight: '10%',
     paddingTop: '3rem',
     textAlign: 'left',
-    maxWidth: '1800px',
+    maxWidth: '1400px',
     marginLeft: 'auto',
     marginRight: 'auto'
   },
