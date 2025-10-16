@@ -26,9 +26,9 @@ export default function About() {
         <div style={styles.inNumbers}>
           <div style={styles.head}>
 
-          <h1> Quick facts</h1>
+          <h1> About me</h1>
              
-          <p> Hi! I&apos;m Anne, a UX Designer and Engineer currently based in Linköping, Sweden. I&apos;m passionate about creating intuitive and functional user experiences and am now planning my next chapter in Berlin.</p>    
+          <p> Hi! I&apos;m Anne, a UX Designer and Engineer currently based in Berlin. I&apos;m passionate about creating intuitive and functional user experiences and am now planning my next chapter.</p>    
              <p> And of course, I believe in the power of numbers and data to tell compelling stories—so let&apos;s explore those too!</p>
           </div>
          
@@ -91,7 +91,10 @@ const styles = {
   container: {
     display: 'flex',
    flexDirection: 'column',
-   minHeight: '100vh'
+   minHeight: '100vh',
+   marginLeft: 'auto',
+   marginRight: 'auto',
+   maxWidth: '1400px',
   },
   
   main: {
