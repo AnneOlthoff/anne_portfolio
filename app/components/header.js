@@ -46,6 +46,7 @@ export default function Header() {
   const styles = {
     header: {
       position: 'sticky',
+      zIndex: '1000',
       top: '0px',
       display: 'flex',
       justifyContent: 'space-between', 
