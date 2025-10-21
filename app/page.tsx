@@ -5,7 +5,7 @@ import Head from 'next/head';
 
 
 import Header from './components/header';
-import Projects from './components/projects';
+import Projects from './pickProject/page';
 import Footer from './components/footer';
 import SVGAnimation from './components/svganimation';
 

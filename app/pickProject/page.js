@@ -2,7 +2,9 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import '../globals.css';
-import displayProject from './project.js'
+
+import Link from 'next/link';
+
 
 export default function Projects() {
   const [data, setData] = useState([]);
@@ -12,7 +14,7 @@ export default function Projects() {
 
   // Hämta JSON-data
   useEffect(() => {
-    fetch('/data/file.json')
+    fetch('../data/file.json')
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch data');
         return res.json();
@@ -54,31 +56,18 @@ export default function Projects() {
       {/* Knappar överst */}
       <div style={styles.grid}>
         {data.map((project, index) => (
-          <button
-            key={project.id || index}
-            onClick={() => displayProject(project, index)}
-            style={styles.card}
-          >
-            {project.what}
-          </button>
+         
+        <Link key={project} href={`/projects/${project.id}`}>
+            <button style={{ padding: '1rem', background: '#eee' }}>
+                {project.what}
+            </button>
+        </Link>
+
         ))}
       </div>
       <br />
 
-      {/* Projektens innehåll */}
-      <div style={styles.projects}>
-        {data.map((project, index) => {
-          // Filtrera endast för logoprojektet
-          const imagesToShow =
-            project.id === 'media-tech-logo'
-              ? project.images.filter((img) =>
-                  isDark ? img.theme === 'dark' : img.theme === 'light'
-                )
-              : project.images;
-
-        })}
-      </div>
-
+      
     
     </section>
   );
@@ -91,8 +80,7 @@ const styles = {
     paddingTop: '3rem',
     textAlign: 'left',
     maxWidth: '1400px',
-    marginLeft: 'auto',
-    marginRight: 'auto'
+    margin: "0 auto",
   },
   imageColumn: {
     flex: '1',

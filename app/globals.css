@@ -7,7 +7,7 @@
 :root {
   --background: #faf9f6;
   --background-secondary: #faf9f6;
-  --background-third: #fdfdfd;
+  --background-third: #ffffff;
   --heading: #18645c;
   --heading-secondary: #062c29;
   --text:  #07312d;
@@ -58,7 +58,7 @@ h3 {
   margin-top: 1rem;
 
   font-weight: 600;
-  color: var(--heading);
+  color: var(--heading-secondary);
 }
 h4{
   font-size: 18px;
@@ -83,6 +83,11 @@ ul{
    color: var(--text, var(--heading));
 }
 
+.mainli{
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--heading-secondary)
+}
 
 @layer utilities {
   .text-balance {
@@ -94,20 +99,38 @@ html {
   scroll-behavior: smooth;
 }
 
+ 
 
-
-.project_grid {
+.heading_grid {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: end;
   gap: 24px;
-  flex-wrap: nowrap;
+  min-height: 90%;
+  height: 70vh;
+  width: 100%;
+  margin-bottom: 8vh;
+
+}
+.text_grid {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 24px;
+  width: 100%;
+  margin-top: 2rem ;
+
 }
 
 @media (max-width: 768px) {
-  .project_grid {
+  .heading_grid {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+  }
+  .text_grid{
+    flex-direction: column;
+    align-items: flex-start;
+
   }
 }
 
