@@ -39,7 +39,7 @@
         preBuild = ''
           cp "${
             pkgs.google-fonts.override { fonts = [ "Inter" ]; }
-          }/share/fonts/truetype/Inter[slnt,wght].ttf" src/app/Inter.ttf
+          }/share/fonts/truetype/Inter[slnt,wght].ttf" app/Inter.ttf
         '';
         postInstall = ''
           mkdir -p $out/bin
