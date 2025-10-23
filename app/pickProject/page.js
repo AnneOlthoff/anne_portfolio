@@ -20,11 +20,6 @@ export default function Projects() {
       .catch((err) => console.error("Error loading JSON:", err));
   }, []);
 
-  const addToRefs = (el) => {
-    if (el && !sectionsRefs.current.includes(el)) {
-      sectionsRefs.current.push(el);
-    }
-  };
 
   return (
     <section style={styles.container} data-aos="fade-up">
@@ -57,9 +52,6 @@ export default function Projects() {
                     height={0}
                     sizes="100vw"
                     style={{ width: "50rem", height: "auto" }}
-
-
-
                      
                   />
                 </div>

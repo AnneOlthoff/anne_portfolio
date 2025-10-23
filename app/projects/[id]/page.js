@@ -1,9 +1,7 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import "../../globals.css";
-import Header from "../../components/header.js";
-import Footer from "../../components/footer.js";
 import projectsData from "../../../public/data/file.json";
 
 import AOS from "aos";
@@ -11,7 +9,7 @@ import "aos/dist/aos.css";
 
 export default function DisplayProject({ params }) {
   const [isDark, setIsDark] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+ // const [selectedImage, setSelectedImage] = useState(null);
 
   const project = projectsData.projects.find(
     (p) => p.id.toString() === params.id
@@ -70,7 +68,7 @@ export default function DisplayProject({ params }) {
             style={styles.imageContainer}
             data-aos="fade-up"
             data-aos-duration="1800"
-            onClick={() => setSelectedImage(image)}
+            //onClick={() => setSelectedImage(image)}
           >
             <Image
               src={image.image || "/default-image.jpg"}
