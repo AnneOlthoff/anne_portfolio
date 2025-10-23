@@ -28,7 +28,7 @@ body {
   color: var(--heading);
   background: var(--background);
 
-  font-family: var(--font-inter), sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 html {

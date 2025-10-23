@@ -75,8 +75,10 @@ export default function DisplayProject({ params }) {
             <Image
               src={image.image || "/default-image.jpg"}
               alt={image.imcap || "Project Image"}
-              width="600"
-              height="300"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "40rem", height: "auto" }}
             />
             {image.imcap && <p style={styles.imcap}>{image.imcap}</p>}
           </div>

@@ -35,6 +35,12 @@
       packages.default = pkgs.buildNpmPackage {
         inherit pname version buildInputs npmDepsHash nativeBuildInputs;
         src = ./.;
+          # see https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/cr/crabfit-frontend/package.nix
+        preBuild = ''
+          cp "${
+            google-fonts.override { fonts = [ "Inter" ]; }
+          }/share/fonts/truetype/Inter[slnt,wght].ttf" src/app/Inter.ttf
+        '';
         postInstall = ''
           mkdir -p $out/bin
           exe="$out/bin/${pname}"

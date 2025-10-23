@@ -53,8 +53,14 @@ export default function Projects() {
                   <Image
                     src={project.prevImage || "/default-image.jpg"}
                     alt={project.what || "Project Image"}
-                    layout="fill"
-                    objectFit="cover"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: "50rem", height: "auto" }}
+
+
+
+                     
                   />
                 </div>
 
@@ -93,10 +99,11 @@ const styles = {
     minHeight: "200px",
   },
   imageWrapper: {
-    width: "100%",
+    width: "auto",
     height: "200px",
     position: "relative",
     overflow: "hidden",
+    zIndex: 1,
   },
 
   overlayText: {
