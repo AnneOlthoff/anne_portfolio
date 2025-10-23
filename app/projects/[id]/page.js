@@ -14,7 +14,6 @@ export default function DisplayProject({ params }) {
   const project = projectsData.projects.find(
     (p) => p.id.toString() === params.id
   );
-  if (!project) return <div>Projektet hittades inte.</div>;
 
   // Lyssna på systemets färgtema
   useEffect(() => {
@@ -25,6 +24,9 @@ export default function DisplayProject({ params }) {
     mq.addEventListener("change", update);
     return () => mq.removeEventListener("change", update);
   }, []);
+
+
+  if (!project) return <div>Projektet hittades inte.</div>;
 
   // Filtrera bilder om det är logoprojekt
   const imagesToShow =
@@ -68,7 +70,7 @@ export default function DisplayProject({ params }) {
             style={styles.imageContainer}
             data-aos="fade-up"
             data-aos-duration="1800"
-            //onClick={() => setSelectedImage(image)}
+            onClick={() => setSelectedImage(image)}
           >
             <Image
               src={image.image || "/default-image.jpg"}

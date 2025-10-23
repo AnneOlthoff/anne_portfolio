@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import "../globals.css";
 
@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Projects() {
   const [data, setData] = useState([]);
-  const sectionsRefs = useRef([]);
+  
 
   // Hämta JSON-data
   useEffect(() => {
