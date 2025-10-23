@@ -1,8 +1,11 @@
 {
   "projects": [
     {
-      "id": 1,
+      "id": "Bitvis-white-label-app",
       "what": "White-label app",
+      "prevImage":  "/images/prevImg/white_label_bitvis_pick.png",
+       
+     
       "images": [
         {
           "image": "/images/malar_light.png",
@@ -17,7 +20,7 @@
           "imcap": "Picked draft: mainly using wine red and deeper blue to follow their design guidelines while maximizing contrast."
         }
       ],
-      "heading": "White-label design with a Personal Touch",
+      "heading": "White-label Design with a Personal Touch",
       "subheading": "Balancing customization, consistency, and accessibility (2022-2025)",
       "introduction": "When designing a mobile-friendly energy consumption graph, several key decisions shaped the final outcome:",
       "bullets": [
@@ -68,15 +71,18 @@
     },
 
     {
-      "id": 2,
-      "what": "Graphs for small screens",
+      "id": "smaler-display-graphs",
+      "what": "Graphs for smaller displays",
+       "prevImage":  "/images/prevImg/graph_bitvis_pick.png",
+         
+    
       "images": [
         {
           "image": "/images/analysis.png",
           "imcap": "The step graph allows users to visualize electricity usage over time, with an optional secondary graph for comparisons, for example, prices versus purchased electricity. A datepicker overlay guides users through selecting a time interval (day, month, or year), followed by a specific period to explore in detail."
         }
       ],
-      "heading": "Designing graphs for smal screens",
+      "heading": "Designing Graphs for smaler Displays",
       "subheading": "Optimizing Data Visualization for an Electrical Consumption App (2022-2025)",
       "introduction": "When designing a mobile-friendly energy consumption graph, several key decisions shaped the final outcome:",
       "bullets": ["User experience (UX)", "Data Visualization", "Accesability"],
@@ -133,8 +139,11 @@
       ]
     },
     {
-      "id": 3,
+      "id": "Dashboard-concept",
       "what": "Concept of a Dashboard",
+       "prevImage": "/images/prevImg/dashboard_pick.png",
+         
+      
       "images": [
         {
           "image": "/images/powerFlow_components.png",
@@ -187,8 +196,11 @@
       ]
     },
     {
-      "id": 4,
+      "id": "portfolio-design",
       "what": "Simple Porfolio",
+       "prevImage":  "/images/prevImg/portfolio_pick.png",
+         
+     
       "images": [
         {
           "image": "/images/logga.svg",
@@ -239,8 +251,11 @@
     },
 
     {
-      "id": 5,
+      "id": "openSpace",
       "what": "OpenSpace",
+      "prevImage":  "/images/prevImg/openspace_pick.png",
+         
+      
       "images": [
         {
           "image": "/images/storyline.png",
@@ -355,8 +370,10 @@
       ]
     },
     {
-      "id": "media-tech-logo",
+      "id": "education",
       "what": "Education",
+       "prevImage": "/images/prevImg/mt_pick.png",
+          
       "images": [
         {
           "image": "/images/logo_mt.png",

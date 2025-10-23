@@ -30,139 +30,129 @@ export default function DisplayProject({ params }) {
 
   // Filtrera bilder om det är logoprojekt
   const imagesToShow =
-    project.id === "media-tech-logo"
+    project.id === "education"
       ? project.images.filter((img) =>
           isDark ? img.theme === "dark" : img.theme === "light"
         )
       : project.images;
 
   return (
-    <div>
-      <Header></Header>
-      <section
-        style={styles.container}
-        data-aos="fade-up"
-        data-aos-duration="1200"
-      >
-        {/* Rubrik */}
+    <section
+      style={styles.container}
+      data-aos="fade-up"
+      data-aos-duration="1200"
+    >
+      {/* Rubrik */}
 
-        <div className="heading_grid" data-aos="fade-up">
-          <div style={styles.headingColumn}>
-            <h1>{project.heading}</h1>
-            <h3>{project.subheading}</h3>
+      <div className="heading_grid" data-aos="fade-up">
+        <div style={styles.headingColumn}>
+          <h1>{project.heading}</h1>
+          <h3>{project.subheading}</h3>
+        </div>
+
+        <div style={styles.bullets}>
+          <ul>
+            {project.bullets.map((bullet, index) => (
+              <li className="mainli" key={index}>
+                {" "}
+                • {bullet}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* Bilder */}
+      <div style={styles.imageGrid}>
+        {imagesToShow.map((image, index) => (
+          <div
+            key={index}
+            style={styles.imageContainer}
+            data-aos="fade-up"
+            data-aos-duration="1800"
+            onClick={() => setSelectedImage(image)}
+          >
+            <Image
+              src={image.image || "/default-image.jpg"}
+              alt={image.imcap || "Project Image"}
+              width="600"
+              height="300"
+            />
+            {image.imcap && <p style={styles.imcap}>{image.imcap}</p>}
           </div>
+        ))}
+      </div>
 
-          <div style={styles.bullets}>
-            <ul>
-              {project.bullets.map((bullet, index) => (
-                <li className="mainli" key={index}>
-                  {" "}
-                  • {bullet}
-                </li>
+      {/* Textsektioner */}
+      <div>
+        {project.sections.map((section, index) => (
+          <div key={index} className="text_grid" data-aos="fade-up">
+            <div style={styles.headingColumn}>
+              <h2>{section.title}</h2>
+            </div>
+            <div style={styles.textSection}>
+              <p>{section.sectionOne}</p>
+
+              {section.subsections?.map((sub, subIndex) => (
+                <div key={subIndex}>
+                  <h3>{sub.title}</h3>
+                  <p>{sub.sectionOne}</p>
+
+                  {sub.subSteps && (
+                    <ul>
+                      {sub.subSteps.map((step, stepIndex) => (
+                        <li key={stepIndex}>• {step}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <p>{sub.sectionTwo}</p>
+                </div>
               ))}
-            </ul>
+
+              {section.steps && (
+                <ul>
+                  {section.steps.map((step, stepIndex) => (
+                    <li key={stepIndex}>• {step}</li>
+                  ))}
+                </ul>
+              )}
+              <p>{section.sectionTwo}</p>
+            </div>
           </div>
-        </div>
+        ))}
+      </div>
 
-        {/* Bilder */}
-        <div style={styles.imageGrid}>
-          {imagesToShow.map((image, index) => (
-            <div
-              key={index}
-              style={styles.imageContainer}
-              data-aos="fade-up"
-              data-aos-duration="1800"
-              onClick={() => setSelectedImage(image)}
-            >
-              <Image
-                src={image.image || "/default-image.jpg"}
-                alt={image.imcap || "Project Image"}
-                width="500"
-                height="300"
-              />
-              {image.imcap && <p style={styles.imcap}>{image.imcap}</p>}
-            </div>
-          ))}
-        </div>
-
-        {/* Textsektioner */}
-        <div>
-          {project.sections.map((section, index) => (
-            <div key={index} className="text_grid" data-aos="fade-up">
-              <div style={styles.headingColumn}>
-                <h2>{section.title}</h2>
-              </div>
-              <div style={styles.textSection}>
-                <p>{section.sectionOne}</p>
-
-                {section.subsections?.map((sub, subIndex) => (
-                  <div key={subIndex}>
-                    <h3>{sub.title}</h3>
-                    <p>{sub.sectionOne}</p>
-                    
-                    {sub.subSteps && (
-                      <ul>
-                        {sub.subSteps.map((step, stepIndex) => (
-                          <li key={stepIndex}>• {step}</li>
-                        ))}
-                      </ul>
-                    )}
-                    <p>{sub.sectionTwo}</p>
-                  </div>
-                ))}
-                
-                {section.steps && (
-                  <ul>
-                    {section.steps.map((step, stepIndex) => (
-                      <li key={stepIndex}>• {step}</li>
-                    ))}
-                  </ul>
-                )}
-                <p>{section.sectionTwo}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Modal för förstoring 
+      {/* Modal för förstoring 
         
             !!!---------------------------------------TO DO----------------------------------!!! 
-        */}
-        {selectedImage && (
-          <div
-            style={styles.modalOverlay}
-            onClick={() => setSelectedImage(null)}
-          >
-            <div
-              style={styles.modalContent}
-              onClick={(e) => e.stopPropagation()}
+        
+      {selectedImage && (
+        <div style={styles.modalOverlay} onClick={() => setSelectedImage(null)}>
+          <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <Image
+              src={selectedImage.image || "/default-image.jpg"}
+              alt={selectedImage.imcap || "Enlarged Project Image"}
+              width="500"
+              height="300"
+              style={{
+                width: "100%",
+                maxHeight: "80vh",
+                objectFit: "contain",
+              }}
+            />
+            {selectedImage.imcap && (
+              <p style={styles.imcap}>{selectedImage.imcap}</p>
+            )}
+            <button
+              style={styles.closeButton}
+              onClick={() => setSelectedImage(null)}
             >
-              <Image
-                src={selectedImage.image}
-                alt={selectedImage.imcap || "Enlarged Project Image"}
-                width="500"
-                height="300"
-                style={{
-                  width: "100%",
-                  maxHeight: "80vh",
-                  objectFit: "contain",
-                }}
-              />
-              {selectedImage.imcap && (
-                <p style={styles.imcap}>{selectedImage.imcap}</p>
-              )}
-              <button
-                style={styles.closeButton}
-                onClick={() => setSelectedImage(null)}
-              >
-                ✕
-              </button>
-            </div>
+              ✕
+            </button>
           </div>
-        )}
-      </section>
-      <Footer></Footer>
-    </div>
+        </div>
+      )}*/}
+    </section>
   );
 }
 
@@ -171,6 +161,7 @@ const styles = {
     display: "flex", // aktiverar flexbox
     alignItems: "center", // centrerar vertikalt
     flexDirection: "column",
+    paddingBottom: "8rem",
   },
 
   headingRow: {
@@ -198,25 +189,31 @@ const styles = {
     flexWrap: "wrap",
     gap: "1rem",
     textAlign: "center",
-    width: "96%",
     justifyContent: "center",
+    width: "98vw",
+    marginLeft: "calc(-10%)",
+    marginRight: "calc(-10%)",
   },
 
   imageContainer: {
-    flex: "1 1 500px",
+    flex: "1 1 600px",
     padding: "16rem 2rem",
     backgroundColor: "var(--background-third)",
     cursor: "pointer",
     borderWidth: "1px",
     borderColor: "var(--divider-color)  ",
     display: "flex", // aktiverar flexbox
-    alignItems: "center", // centrerar vertikalt
+    alignItems: "center", // centrerar horisontellt
+    justifyContent: "center", //centrerar vertikalt
     flexDirection: "column",
   },
   imcap: {
     marginTop: "1rem",
     fontStyle: "italic",
     maxWidth: "34rem",
+    width: "100%",
+    heit: "auto",
+    objectFit: "cover",
   },
   titleSection: {
     flex: "1",

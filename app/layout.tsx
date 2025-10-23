@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter} from "next/font/google";
 import "./globals.css";
 
-
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 const inter = Inter({
   display: "swap",
@@ -17,17 +18,23 @@ export const metadata: Metadata = {
   description: "",
 };
 
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable}`}
-    >
-      <body className="antialiased">{children}</body>
+    <html lang="en" className={`${inter.variable}`}>
+      <body className="antialiased">
+        <div className="page_layout">
+          <Header />
+          <main className="main_content">
+            {children}
+          </main>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }

@@ -8,17 +8,21 @@ import Link from "next/link";
 export default function Header() {
   
   const router = useRouter();
-  const pathname = usePathname();
+
 
   const handleScroll = (e) => {
     e.preventDefault();
-    if (pathname === '/') {
+    const targetElement = document.querySelector('#my-work');
+    if (targetElement) {
       // Scrolla till sektionen om vi är på startsidan
-      document.querySelector('#my-work').scrollIntoView({ behavior: 'smooth'});
+      targetElement.scrollIntoView({ behavior: 'smooth'});
+      console.log("hamnar vi här")
     } else {
       // Navigera till startsidan först
+      console.log("eller här")
       router.push('/#my-work');
     }
+  
   };
   
     return (

@@ -21,14 +21,14 @@ export default function Home() {
         <meta name="description" content="Whoo" />
       </Head>
       <div>
-        <Header />
+        
       
         <SVGAnimation/>
         
-        <div id="my-work" style={{marginTop: '4px'}}  >
+        <div id="my-work"  >
            <Projects/>
         </div>
-        <Footer />
+       
       </div>
       </div>
    
