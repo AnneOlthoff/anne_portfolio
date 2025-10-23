@@ -38,7 +38,7 @@
           # see https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/cr/crabfit-frontend/package.nix
         preBuild = ''
           cp "${
-            google-fonts.override { fonts = [ "Inter" ]; }
+            nixpkgs.google-fonts.override { fonts = [ "Inter" ]; }
           }/share/fonts/truetype/Inter[slnt,wght].ttf" src/app/Inter.ttf
         '';
         postInstall = ''
