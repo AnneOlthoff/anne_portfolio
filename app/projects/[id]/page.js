@@ -197,7 +197,7 @@ const styles = {
 
   imageContainer: {
     flex: "1 1 600px",
-    padding: "16rem 2rem",
+    padding: "10rem 2rem",
     backgroundColor: "var(--background-third)",
     cursor: "pointer",
     borderWidth: "1px",

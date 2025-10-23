@@ -56,22 +56,12 @@
         {
           "title": "Scaling Design with Frontend Collaboration",
           "sectionOne": "Design and development worked closely to ensure the white-label system was scalable and maintainable. Every new component was tested across multiple customer themes to ensure it worked seamlessly with minimal need for special treatment per electricity retailer."
-        },
-        {
-          "title": "Skills Highlighted",
-          "steps": [
-            "Design systems",
-            "Accessibility ",
-            "White-label product design",
-            "Designing for a B2B system",
-            "UX consistency across clients"
-          ]
         }
       ]
     },
 
     {
-      "id": "smaler-display-graphs",
+      "id": "smaller-display-graphs",
       "what": "Graphs for smaller displays",
        "prevImage":  "/images/prevImg/graph_bitvis_pick.png",
          
@@ -82,7 +72,7 @@
           "imcap": "The step graph allows users to visualize electricity usage over time, with an optional secondary graph for comparisons, for example, prices versus purchased electricity. A datepicker overlay guides users through selecting a time interval (day, month, or year), followed by a specific period to explore in detail."
         }
       ],
-      "heading": "Designing Graphs for smaler Displays",
+      "heading": "Designing Graphs for Smaller Displays",
       "subheading": "Optimizing Data Visualization for an Electrical Consumption App (2022-2025)",
       "introduction": "When designing a mobile-friendly energy consumption graph, several key decisions shaped the final outcome:",
       "bullets": ["User experience (UX)", "Data Visualization", "Accesability"],
@@ -127,14 +117,7 @@
         {
           "title": "5. The date picker for the graph",
           "sectionOne": "We also designed a date picker tailored for mobile use, enabling users to easily switch between day, week, month, and year views. It adapts seamlessly to small screens and allows users to explore historical data without friction. "
-        },
-        {
-          "title": "Skills Highlighted",
-          "steps": [
-            "User experience (UX)",
-            "Data Visualization",
-            "Accesability"
-          ]
+
         }
       ]
     },
@@ -178,16 +161,6 @@
         {
           "title": "Sales Integration and Strategic Impact",
           "sectionOne": "The concept was used in pitch decks and demos to show what Power Flow could become. It helped shift conversations from technical limitations to user-centered possibilities, and positioned our team as UX-driven innovators."
-        },
-        {
-          "title": "Skills Highlighted",
-          "steps": [
-            "Dashboard UX design",
-            "Visual storytelling",
-            "Figma prototyping",
-            "Customer research",
-            "Designing for emotional tone"
-          ]
         },
         {
           "title": "What I Learned",
@@ -238,15 +211,8 @@
         {
           "title": "Creating the webb page, using React",
           "sectionOne": "Every part of this portfolio is built using React and Next.js. Building this portfolio has been a learning journey, where I’ve honed my skills in React while keeping the design and functionality aligned with my principles of simplicity, clarity, and efficiency. "
-        },
-        {
-          "title": "Skills Highlighted",
-          "steps": [
-            "User experience (UX)",
-            "SVG-animations",
-            "Front-end development with React"
-          ]
         }
+
       ]
     },
 
@@ -354,16 +320,6 @@
           "sectionTwo": "The storytelling format helped users emotionally connect to abstract scientific data, while the visual tools supported intuitive learning"
         },
         {
-          "title": "Key Skills",
-          "steps": [
-            "UX and interaction design for scientific visualization",
-            "Interface development in React",
-            "Data transformation and geospatial analysis",
-            "Interactive storytelling and narrative UX",
-            "User testing and iteration"
-          ]
-        },
-        {
           "title": "What I Learned",
           "sectionOne": "Designing for scientific communication requires careful balance between accuracy and accessibility. I learned how to translate abstract climate data into an intuitive experience, and how to use storytelling as a tool for engagement and education. I also deepened my skills in cross-functional collaboration, working closely with researchers, developers, and museum professionals."
         }
@@ -409,17 +365,6 @@
           "sectionTwo": "One project that stood out involved designing a dashboard for environmental data. It was the first time I saw how layout, hierarchy, and visual tone could turn raw statistics into something meaningful and actionable. That experience sparked my long-term interest in designing tools that simplify complexity and make technology feel more human."
         },
 
-        {
-          "title": "Key Skills",
-          "steps": [
-            "UX and interaction design",
-            "Data visualization",
-            "Frontend development (HTML/CSS/JS)",
-            "Programming in C++",
-            "AI and machine learning fundamentals",
-            "Graphic design and visual communication"
-          ]
-        },
         {
           "title": "What I Learned",
           "sectionOne": "My education taught me to see design as a strategic tool—one that connects people, data, and technology. It also gave me the technical confidence to work across disciplines, and the curiosity to keep learning. Today, I bring that mindset into every project: combining structure and empathy, logic and creativity"

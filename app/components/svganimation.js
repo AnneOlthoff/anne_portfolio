@@ -105,7 +105,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     maxHeight: '100vh',
-    minHeight: '100vh',
-    paddingTop: '20vh',
+    minHeight: '70vh',
+    paddingTop: '20%',
   },
 };
