@@ -65,6 +65,7 @@ h5 {
 }
 p {
   color: var(--text, var(--heading));
+  margin-bottom: 0.5rem;
 }
 br {
   display: block;
@@ -143,7 +144,6 @@ html {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   width: 100%;
-  max-width: 600px;
   margin: 0 auto;
 }
 

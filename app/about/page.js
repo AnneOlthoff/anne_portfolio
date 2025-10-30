@@ -18,77 +18,69 @@ export default function About() {
   //   return <span>{years}</span>;
   // };
   useEffect(() => {
-      AOS.init({ duration: 800, once: true });
-      
-    }, []);
+    AOS.init({ duration: 800, once: true });
+  }, []);
 
   return (
-    
-    
-        <div style={styles.container} data-aos="fade-up">
-        
-            <div style={styles.aboutme}>
-              <h1> About me</h1>
-              <div>
-              <p>
-                {" "}
-                Hi! I&apos;m Anne, a UX Designer and Engineer currently based in
-                Berlin. I&apos;m passionate about creating intuitive and
-                functional user experiences and am now planning my next chapter.
-              </p>
-              <p>
-                {" "}
-                And of course, I believe in the power of numbers and data to
-                tell compelling stories—so let&apos;s explore those too!
-              </p>
-              </div>
-            </div>
+    <div style={styles.container} data-aos="fade-up">
+      <div style={styles.aboutme}>
+        <h1> About me</h1>
+        <div>
+          <p>
+            Hi! I&apos;m Anne — a UX Designer and Engineer based in Berlin. I
+            love designing clear, scalable systems that make complex data and
+            technology feel intuitive.
+          </p>
+          <p>
+            At Bitvis, I joined as the company’s first UX designer, where I
+            built the foundation for a design system used across multiple
+            products. My background in engineering helps me bridge the gap
+            between design and development, making collaboration smoother and
+            decisions more data-informed.
+          </p>
+          <p>
+            I’m driven by curiosity, empathy, and a love for clean, purposeful
+            design — and yes, fueled by a few too many cups of black coffee.
+          </p>
+        </div>
+      </div>
 
-            <div className= "facts">
-             
-                <div style={styles.fact}>
-                  <h1> 1 </h1>
-                  <p>
-                    {" "}
-                    One bike since I moved to Linköping, and it&apos;s still not
-                    stolen
-                  </p>
-                </div>
-                <div style={styles.fact}>
-                  <h1> 2+ </h1>
-                  <p> Over two years of experience working in UX </p>
-                  <br />
-                </div>
+      <div className="facts">
+        <div style={styles.fact}>
+          <h1>1st</h1>
+          <p>First UX designer at Bitvis - building structure from scratch</p>
+        </div>
+        <div style={styles.fact}>
+          <h1> 2 </h1>
+          <p>  Two cups of black coffee every day  </p>
+          <br />
+        </div>
 
-                <div style={styles.fact}>
-                  <h1> 3 </h1>
-                  <p> Three Cups of black coffee every day </p>
-                </div>
-             
+        <div style={styles.fact}>
+          <h1> 3 </h1>
+          <p> Years of hands-on UX experience in product teams</p>
+        </div>
 
-                <div style={styles.fact}>
-                  <h1> 4 </h1>
-                  <p>I lied, four cups of coffee </p>
-                </div>
-                <div style={styles.fact}>
-                  <h1> 5 </h1>
-                  <p> I have lived in five different cities </p>
-                </div>
+        <div style={styles.fact}>
+          <h1> 4 </h1>
+          <p>German level: 4 words mastered… and counting 😅 </p>
+        </div>
+        <div style={styles.fact}>
+          <h1> 5 </h1>
+          <p> Cities I’ve lived in - now calling Berlin home </p>
+        </div>
 
-                <div style={styles.fact}>
-                  <h1> 6+ </h1>
-                  <p>6+ years using Figma </p>
-                </div>
-              </div>
-            
-          </div>
-       
-    
+        <div style={styles.fact}>
+          <h1> 6+ </h1>
+          <p>Years designing in Figma and building scalable design systems </p>
+        </div>
+      </div>
+    </div>
   );
 }
 const styles = {
   container: {
-    paddingTop: "20%", 
+    paddingTop: "20%",
     flex: "1 1 100px",
     display: "flex",
     position: "relative",
@@ -99,22 +91,14 @@ const styles = {
     alignItems: "start",
   },
 
-  
   aboutme: {
+    flex: 1,
+    flexWrap: "wrap",
+    display: "flex",
+    flexDirection: "column",
     
-  flex: 1,
-  flexWrap: "wrap",
-  maxWidth: "35rem",
-  display: "flex",
-  flexDirection: "column",
-  gap: "2rem",
-  textAlign: "left",
-  
-
-  
+    textAlign: "left",
   },
-
-  
 
   row: {
     display: "flex",
@@ -124,8 +108,7 @@ const styles = {
   },
 
   fact: {
-    flex: "1 1 43%",
+    flex: "1 1 50%",
     flex: 2,
-    minWidth: "200px",
   },
 };

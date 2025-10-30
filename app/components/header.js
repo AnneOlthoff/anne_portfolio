@@ -55,9 +55,8 @@ const styles = {
     borderBottom: "1px solid var(--divider-color)",
   },
   verticleLine:{
-    borderLeft: "1px solid green",
+    borderLeft: "1px solid var(--divider-color)",
     height:"2rem",
-    color: "var(--divider-color)"
   },
   navGroup: {
     display: "flex",
