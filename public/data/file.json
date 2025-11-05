@@ -79,7 +79,7 @@
           "sectionImages": [
             {
               "image": "/images/datepicker_two_themes.png",
-              "imcap": "Example of a shared component (date picker) displayed in two customer themes, demonstrating system flexibility."
+              "imcap": "Example of a shared component (date picker) displayed in two customer themes, for demonstrating system flexibility and the potential of Figma Variables."
             }
           ]
         }
