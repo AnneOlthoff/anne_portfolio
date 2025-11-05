@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 
 export default function DisplayProject({ params }) {
   const [isDark, setIsDark] = useState(false);
- // const [selectedImage, setSelectedImage] = useState(null);
+  // const [selectedImage, setSelectedImage] = useState(null);
 
   const project = projectsData.projects.find(
     (p) => p.id.toString() === params.id
@@ -24,7 +24,6 @@ export default function DisplayProject({ params }) {
     mq.addEventListener("change", update);
     return () => mq.removeEventListener("change", update);
   }, []);
-
 
   if (!project) return <div>Projektet hittades inte.</div>;
 
@@ -43,7 +42,6 @@ export default function DisplayProject({ params }) {
       data-aos-duration="1200"
     >
       {/* Rubrik */}
-
       <div className="heading_grid" data-aos="fade-up">
         <div style={styles.headingColumn}>
           <h1>{project.heading}</h1>
@@ -78,7 +76,7 @@ export default function DisplayProject({ params }) {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: "40rem", height: "auto" }}
+              style={{ width: "48rem", height: "auto", maxHeight: "30rem", objectFit: "contain" }}
             />
             {image.imcap && <p style={styles.imcap}>{image.imcap}</p>}
           </div>
@@ -88,41 +86,81 @@ export default function DisplayProject({ params }) {
       {/* Textsektioner */}
       <div>
         {project.sections.map((section, index) => (
-          <div key={index} className="text_grid" data-aos="fade-up">
-            <div style={styles.headingColumn}>
-              <h2>{section.title}</h2>
-            </div>
-            <div style={styles.textSection}>
-              <p>{section.sectionOne}</p>
+          <div key={index} style={{ marginTop: "2rem" }}>
+            {/* Bilder inuti sektioner */}
+            {section.sectionImages && section.sectionImages.length > 0 && (
+              <div className= "subImageGrid">
+                {section.sectionImages.map((image, imgIndex) => (
+                  <div
+                    key={imgIndex}
+                    style={styles.subImageContainer}
+                    data-aos="fade-up"
+                    data-aos-duration="1800"
+                    onClick={() => setSelectedImage(image)}
+                  >
+                    <Image
+                      src={image.image}
+                      alt={image.imcap || "Section image"}
+                      width={0}
+                      height={0}
+                      
+                      sizes="100vw"
+                      style={{ width: "48rem", height: "auto", maxHeight: "30rem",
+                      objectFit: "contain"}}
+                    />
+                    {image.imcap && <p style={styles.imcap}>{image.imcap}</p>}
+                  </div>
+                ))}
+              </div>
+            )}
+            <div key={index} className="text_grid" data-aos="fade-up">
+              <div style={styles.headingColumn}>
+                <h2>{section.title}</h2>
+                {section.steps && (
+                  <ul>
+                    {section.steps.map((step, stepIndex) => (
+                      <li key={stepIndex}>• {step}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+              <div style={styles.textSection}>
+                <p>{section.sectionOne}</p>
 
-              {section.subsections?.map((sub, subIndex) => (
-                <div key={subIndex}>
-                  <h3>{sub.title}</h3>
-                  <p>{sub.sectionOne}</p>
+                {section.subsections?.map((sub, subIndex) => (
+                  <div key={subIndex}>
+                    <h3>{sub.title}</h3>
+                    <p>{sub.sectionOne}</p>
 
-                  {sub.subSteps && (
-                    <ul>
-                      {sub.subSteps.map((step, stepIndex) => (
-                        <li key={stepIndex}>• {step}</li>
-                      ))}
-                    </ul>
-                  )}
-                  <p>{sub.sectionTwo}</p>
-                </div>
-              ))}
+                    {sub.subSteps && (
+                      <ul>
+                        {sub.subSteps.map((step, stepIndex) => (
+                          <li key={stepIndex}>• {step}</li>
+                        ))}
+                      </ul>
+                    )}
+                    <p>{sub.sectionTwo}</p>
+                  </div>
+                ))}
 
-              {section.steps && (
-                <ul>
-                  {section.steps.map((step, stepIndex) => (
-                    <li key={stepIndex}>• {step}</li>
-                  ))}
-                </ul>
-              )}
-              <p>{section.sectionTwo}</p>
+                <p>{section.sectionTwo}</p>
+              </div>
             </div>
           </div>
         ))}
       </div>
+      {/* More info about a procejt */}
+      {project.link && (
+        <div
+          style={styles.linkGrid}
+          data-aos="fade-up"
+          data-aos-duration="1800"
+        >
+          <a href={project.link.link} target="_blank" style={styles.linkButton}>
+            {project.link.linkcap}{" "}
+          </a>
+        </div>
+      )}
 
       {/* Modal för förstoring 
         
@@ -166,13 +204,7 @@ const styles = {
     paddingBottom: "8rem",
   },
 
-  headingRow: {
-    flex: "1",
-    display: "flex",
-    flexDirection: "row",
-    gap: "10px",
-    animationDelay: "2s",
-  },
+ 
   headingColumn: {
     flex: "1",
     minWidth: "250px",
@@ -202,12 +234,27 @@ const styles = {
     padding: "10rem 2rem",
     backgroundColor: "var(--background-third)",
     cursor: "pointer",
-    borderWidth: "1px",
     borderColor: "var(--divider-color)  ",
     display: "flex", // aktiverar flexbox
     alignItems: "center", // centrerar horisontellt
     justifyContent: "center", //centrerar vertikalt
     flexDirection: "column",
+  },
+
+  
+
+  subImageContainer: {
+    flex: "1 1 600px",
+    padding: "4rem 4rem 2rem 4rem",
+   
+    backgroundColor: "var(--background-third)",
+    cursor: "pointer",
+    borderColor: "var(--divider-color)  ",
+    display: "flex", // aktiverar flexbox
+    alignItems: "center", // centrerar horisontellt
+    justifyContent: "center", //centrerar vertikalt
+    flexDirection: "column",
+    width: "100%"
   },
   imcap: {
     marginTop: "1rem",
@@ -216,11 +263,6 @@ const styles = {
     width: "100%",
     heit: "auto",
     objectFit: "cover",
-  },
-  titleSection: {
-    flex: "1",
-    minWidth: "250px",
-    textAlign: "left",
   },
   textSection: {
     flex: "1",
@@ -254,5 +296,23 @@ const styles = {
     borderRadius: "50%",
     fontSize: "1.2rem",
     cursor: "pointer",
+  },
+
+  linkGrid: {
+    width: "100%",
+    display: "flex",
+    paddingTop: "4rem",
+    height: "auto",
+    justifyContent: "right",
+    alignItems: "end",
+  },
+  linkButton: {
+    padding: "0.6rem 1.2rem",
+    borderRadius: "2rem",
+    border: "1px solid var(--heading)",
+    color: "var(--heading)",
+    textDecoration: "none",
+    fontWeight: 600,
+    transition: "all 0.3s ease",
   },
 };

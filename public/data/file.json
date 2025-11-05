@@ -3,59 +3,85 @@
     {
       "id": "Bitvis-white-label-app",
       "what": "White-label app",
-      "prevImage":  "/images/prevImg/white_label_bitvis_pick.png",
-       
-     
+      "prevImage": "/images/prevImg/white_label_bitvis_pick.png",
       "images": [
         {
           "image": "/images/malar_light.png",
-          "imcap": "Drafts of a ligher version for Mälarenergi, focusing on using there primary blue and secondary orange on grapichs and as texts."
+          "imcap": "Three visual directions for the same customer, exploring light, dark, and brand-specific variations while keeping a consistent structure."
         },
         {
           "image": "/images/malar_blue.png",
-          "imcap": "Draft of a darker version for Mälarenergi using a deeper blue for better contrast with their secondary orange witch is WCAG AA compliant."
+          "imcap": "Example of how brand colors were tested and adjusted to improve contrast and accessibility across themes."
         },
         {
           "image": "/images/malar_final.png",
-          "imcap": "Picked draft: mainly using wine red and deeper blue to follow their design guidelines while maximizing contrast."
+          "imcap": "Final concept for Mälarenergi: refined palette and typography tuned for both brand expression and WCAG AA compliance."
         }
       ],
-      "heading": "White-label Design with a Personal Touch",
-      "subheading": "Balancing customization, consistency, and accessibility (2022-2025)",
-      "introduction": "When designing a mobile-friendly energy consumption graph, several key decisions shaped the final outcome:",
+
+      "heading": "Scaling the White-Label Design at Bitvis",
+      "subheading": "From one to thirteen customers in under three years",
+      "introduction": "As the first UX designer at Bitvis, I helped shape a white-label app for electricity retailers across Sweden. The goal was to make every customer’s app feel unique and on-brand, while keeping the product consistent, accessible, and easy to maintain.",
       "bullets": [
         "Design systems",
-        "Accessibility ",
+        "Accessibility",
         "White-label product design",
-        "Designing for a B2B system",
-        "UX consistency across clients"
+        "Designing for a B2B platform",
+        "Scalable UX and frontend collaboration"
       ],
       "sections": [
         {
           "title": "Overview",
-          "sectionOne": "Bitvis offers a white-label app for electricity retailers in Sweden, designed to make each end customer feel seen and prioritized. This required an interface that felt personal and on-brand, without fragmenting the core product or adding complexity. Each retailer had its own view of customer needs, which gave us valuable, ongoing user feedback. The challenge: How do you create a tailored experience for each client while maintaining consistency, accessibility, and ease of maintenance?"
+          "sectionOne": "As the first UX designer at Bitvis, I helped shape a white-label app for electricity retailers across Sweden. The goal was to make every customer’s app feel unique and on-brand, while keeping the product consistent, accessible, and easy to maintain. Over time, our team grew the platform from one to thirteen clients, refining both the design system and our process along the way."
         },
-
         {
-          "title": "A Modular Foundation with Flexible Branding for a “Homely” Experience",
-          "sectionOne": "Each retailer had unique brand requirements — from color schemes and typography to tone of voice, as well as their own feature requests. To support this, we introduced a design system built around:",
+          "title": "A Modular Foundation with Flexible Branding",
+          "sectionOne": "Each retailer came with unique brand requirements, from colors and typography to tone of voice and special features. We introduced a design system based on customizable tokens for color, type, and spacing, paired with Figma variables to quickly generate branded drafts. Above, you can see three design directions for the same customer, each exploring different ways to express their visual identity while staying within the system.",
           "steps": [
             "Customizable design tokens for colors, typography, and spacing",
-            "Figma variables to quickly create and present tailored design drafts — as seen to the left, where we explored three brand themes for the same customer.",
-            "A modular app architecture that allows smaller feature add-ons to highlight each retailer’s unique services"
+            "Figma variables for faster brand prototyping",
+            "A modular app architecture supporting feature add-ons per retailer"
           ]
         },
         {
           "title": "Prioritizing Accessibility Across Custom Themes",
-          "sectionOne": "Different color schemes and branding requirements introduced a risk: inconsistent contrast ratios or color combinations that could fail accessibility standards — especially as smaller electricity retailers often had graphical brand books with colors that weren’t ideal for user interfaces or WCAG AA compliance. To maintain accessibility:",
+          "sectionOne": "Early on, some brand colors made accessibility tricky. As smaller retailers often had graphical guidelines not optimized for digital use, we standardized how colors were applied and tested every theme for contrast and color blindness compatibility. The GIF above illustrates how our color tokens allowed instant switching between customers while maintaining WCAG AA compliance.",
           "steps": [
-            "Every theme variant was tested for color blindness compatibility and AA compliance",
-            "When needed, we created new color schemes that still preserved the 'homely' brand feel"
+            "Testing each color variant for contrast and color blindness",
+            "Refining brand palettes to balance identity and accessibility",
+            "Simplifying rules for consistent AA compliance"
+          ],
+          "sectionImages": [
+            {
+              "image": "/images/color_tokens.gif",
+              "imcap": "Color system in action, switching between two customer themes using shared color tokens."
+            }
           ]
         },
         {
           "title": "Scaling Design with Frontend Collaboration",
-          "sectionOne": "Design and development worked closely to ensure the white-label system was scalable and maintainable. Every new component was tested across multiple customer themes to ensure it worked seamlessly with minimal need for special treatment per electricity retailer."
+          "sectionOne": "Initially, we redesigned every view in Figma for each customer. As we grew, we shifted toward a more agile process: developers implemented the core themes directly in the app, and designers reviewed live builds to adjust only what was needed. This made collaboration faster, more dynamic, and more accurate. We designed with the product, not just for it. Below is an example of a shared component, a date picker, displayed in two customer themes.",
+          "steps": [
+            "Moved from static Figma views to a live, theme-based workflow",
+            "Improved iteration speed through early developer collaboration",
+            "Ensured each component worked seamlessly across themes"
+          ]
+        },
+        {
+          "title": "Scaling the White-Label System and Evolving Our Process",
+          "sectionOne": "As the customer base expanded, we developed a structured onboarding process: from the first meeting and introduction to the app, through mockups and design proposals, to the final approval and delivery. This made it easier to balance consistency with flexibility. Some customers wanted small visual touches such as a new color, a feature, or a component, and we learned that keeping to a system doesn’t mean being stuck in it. The result was a design process that felt collaborative, efficient, and scalable.",
+          "steps": [
+            "From one customer to thirteen in less than three years",
+            "Simplified design system for faster onboarding",
+            "Introduced a structured onboarding method: intro, mockups, approval, delivery",
+            "Balanced system consistency with client flexibility"
+          ],
+          "sectionImages": [
+            {
+              "image": "/images/datepicker_two_themes.png",
+              "imcap": "Example of a shared component (date picker) displayed in two customer themes, demonstrating system flexibility."
+            }
+          ]
         }
       ]
     },
@@ -63,70 +89,119 @@
     {
       "id": "smaller-display-graphs",
       "what": "Graphs for smaller displays",
-       "prevImage":  "/images/prevImg/graph_bitvis_pick.png",
-         
-    
+      "prevImage": "/images/prevImg/graph_bitvis_pick.png",
       "images": [
         {
           "image": "/images/analysis.png",
-          "imcap": "The step graph allows users to visualize electricity usage over time, with an optional secondary graph for comparisons, for example, prices versus purchased electricity. A datepicker overlay guides users through selecting a time interval (day, month, or year), followed by a specific period to explore in detail."
+          "imcap": "The step graph visualizes electricity usage over time, with an optional comparison layer, such as prices versus purchased electricity. A date picker guides users through selecting the time range to explore in detail."
         }
       ],
       "heading": "Designing Graphs for Smaller Displays",
-      "subheading": "Optimizing Data Visualization for an Electrical Consumption App (2022-2025)",
-      "introduction": "When designing a mobile-friendly energy consumption graph, several key decisions shaped the final outcome:",
-      "bullets": ["User experience (UX)", "Data Visualization", "Accesability"],
+      "subheading": "Optimizing Data Visualization for an Energy App (2022–2025)",
+      "introduction": "Designing a mobile-friendly energy graph required balancing clarity, usability, and accessibility. These were the main design decisions:",
+      "bullets": [
+        "User experience (UX)",
+        "Data visualization",
+        "Accessibility",
+        "Design–development collaboration"
+      ],
       "sections": [
         {
           "title": "Overview",
-          "sectionOne": "One of the key pages in an electrical consumption app is where users can monitor their energy usage and costs. While users want insights into their consumption habits across different time periods—ranging from hourly to yearly—electricity companies also aim to help them recognize patterns and adjust their behaviors. This presents a design challenge: how can we create a clear, accessible, and engaging graph that serves both perspectives while remaining easy to use on small screens? "
+          "sectionOne": "One of the key screens in the energy app lets users track electricity use and costs. While users want to explore their habits over time, energy companies aim to promote awareness and behavior change. The challenge was to design a clear and engaging graph that works on small screens and serves both goals."
         },
         {
-          "title": "1. Choosing the Right Graph Type",
-          "sectionOne": "After exploring several options, we settled on a step graph as the most suitable choice. It blends the advantages of line and bar graphs, providing clarity and a more interactive experience without misrepresenting the data.",
-
+          "title": "Choosing the Right Graph Type",
           "steps": [
-            "A line graph suggests continuous data, which doesn’t accurately represent hourly electricity readings where each hour should be treated as a discrete point on the x-axis. However, one advantage of line graphs is that they feel more interactive, inviting users to naturally drag along the curve with their fingers, especially on mobile.",
-            "A bar graph visualizes discrete data more correctly, clearly separating each hourly value. On the downside, bars tend to feel more static and can make touch interactions less smooth, especially on smaller screens, where hovering or selecting with precision becomes harder.",
-            "By combining the advantages of both, a step graph became the optimal choice. It offers the structural clarity of bars while maintaining the inviting, interactive feel of a line graph. This makes it easy for users to recognize consumption patterns and navigate the data seamlessly on mobile devices."
+            "We chose a step graph to balance clarity and interactive touch experience on mobile."
+          ],
+          
+          "subsections": [
+            {
+              "sectionOne": "We compared several visualization types before selecting a step graph — a balance between the clarity of bars and the smooth interaction of lines.",
+              "subSteps": [
+                "Line graphs feel interactive but imply continuous data, which doesn’t fit hourly readings.",
+                "Bar graphs show discrete values clearly but feel static and are harder to use on touchscreens.",
+                "Step graphs combine both strengths, giving clear structure and an intuitive touch experience."
+              ]
+            }
           ]
         },
         {
-          "title": "2. Improving Data Readability on Mobile",
-          "sectionOne": "Traditional tooltips are commonly used in graphs to display data when hovering, but this pattern does not translate well to mobile apps. On touchscreens, tooltips often end up hidden behind the user’s finger, making them difficult to read. To avoid covering too much of the graph, tooltip text also tends to be small, which further reduces legibility. To solve this, we implemented large, fixed-position data values that remain visible without requiring interaction, ensuring that key information is easy to read — even when navigating with thumbs.",
-          "steps": []
+          "title": "Making Data Readable on Mobile",
+          "sectionOne": "On desktop dashboards, it’s common to hover over a graph to see the value for a specific point. On mobile, this interaction doesn’t work well — tooltips often get hidden behind the user’s finger, and text can be too small to read. To solve this, we implemented large, fixed-position values that stay visible without interaction, making key information easy to read while scrolling or tapping."
         },
         {
-          "title": "3.  Comparing Different Data Types Without Overload",
-          "sectionOne": "Users needed to compare both electricity consumption (kWh) and cost per kWh within the same graph. However, multi-variable graphs risk becoming overwhelming. To balance clarity and functionality:",
+          "title": "Visual Design and Accessibility",
+          "sectionOne": "We refined the graph’s visual appearance to clearly separate datasets and support all users, including those with color vision deficiencies. Subtle styling helps users understand the data without distraction, while accessibility markers provide extra clarity.",
           "steps": [
-            "We introduced dual Y-axes with matching visual styles.",
-            "Users can choose to toggle comparison data, keeping the default view simple for less advanced users while still enabling deeper insights for those who want them. "
+            "Gradient on the main line adds depth without distraction.",
+            "Comparison lines outlined for clear separation.",
+            "Color choices tested for contrast and accessibility.",
+            "Shapes (circles and squares) support color-blind interpretation."
           ]
         },
         {
-          "title": "4. Enhancing Readability Through Visual Design",
-          "sectionOne": "To clearly separate datasets:",
+          "title": "Designing the Date Picker",
+          "sectionOne": "Over the years, we iterated through multiple date picker designs. The final solution is a mobile sheet that opens when the user taps the date in the analysis view. Inside the sheet, users can select the interval they want to visualize: hourly for a day, day-by-day for a month, or monthly for a year. Once the sheet is closed, the graph updates to show one step per selected period. Users can also step forward or backward in the analysis view without reopening the sheet, making exploration smoother. To inform the design, we researched patterns across energy apps, travel booking apps, and other common mobile interfaces, balancing familiarity with the extra functionality required for period selection.",
           "steps": [
-            "The main consumption line features a subtle gradient to give it depth without distraction.",
-            "Comparison lines use a white border to remain distinct even when colors overlap, without introducing additional gradients or noise.",
-            "Color choices were made with accessibility in mind, ensuring that all users — including those with color vision deficiencies — can clearly interpret the data.",
-            "Additionally, to ensure accessibility for users with color vision deficiencies, we introduced small graphical markers (circles and squares) on both the graph lines and the corresponding data labels."
+            "Mobile sheet opens when tapping the date.",
+            "Users select interval: hourly, daily, or monthly.",
+            "Graph updates automatically; can step forward/back without reopening.",
+            "Design inspired by familiar patterns, with extra functionality for period selection."
           ]
         },
         {
-          "title": "5. The date picker for the graph",
-          "sectionOne": "We also designed a date picker tailored for mobile use, enabling users to easily switch between day, week, month, and year views. It adapts seamlessly to small screens and allows users to explore historical data without friction. "
-
+          "title": "Comparing Data Types and Technical Constraints",
+          "sectionOne": "Users needed to compare electricity consumption and cost per kWh to understand usage patterns and manage costs. For example, they wanted to see whether electricity was used during cheaper times of day, or to investigate why a bill was higher than expected. Beyond individual bills, users could explore historical consumption data to learn general household patterns and make informed decisions for future behavior. Initially, we used Victory Chart to quickly prototype the graphs, but as requirements grew, we transitioned to Skia for more flexibility and refined interactions.",
+          "steps": [
+            "Enabled dual Y-axes and toggle for consumption vs. cost for clarity and usability.",
+            "Transitioned from Victory Chart to Skia for more control and performance.",
+            "Close collaboration between design and development ensured feasible and usable solutions."
+          ],
+           "sectionImages": [
+            {
+              "image": "/images/analys_old.gif",
+              "imcap": "First version (2022) of the Ananlys-view in the app, using Victory Chart libary and an open source date-picker"
+            },
+            {
+              "image": "/images/analys_new.gif",
+              "imcap": "2025 version of the Ananlys-view in the app, now using Skia Graphics Engine and our own date-picker design. "
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Initial Approach with Victory Chart",
+              "sectionOne": "Victory Chart allowed us to quickly prototype graphs and iterate on visual ideas early in development.",
+              "subSteps": [
+                "Fast to implement initial visualizations.",
+                "Good for testing layouts and basic interactions.",
+                "Helped get a functional graph in front of users early."
+              ]
+            },
+            {
+              "title": "Transition to Skia for Flexibility",
+              "sectionOne": "As the app matured, Victory Chart’s constraints became limiting. Skia offered more freedom but required careful coordination with developers due to rendering rules and limited documentation.",
+              "subSteps": [
+                "Iterative adjustments when visual ideas didn’t align with Skia’s behavior.",
+                "Regular design-developer discussions to find feasible solutions.",
+                "Enabled refined interactions and multi-dataset comparisons without clutter."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Outcome",
+          "sectionOne": "The result was a responsive and accessible graph module that balanced usability and performance across devices. The iterative collaboration between design and development improved alignment across teams and helped establish shared standards for future data visualization components."
         }
       ]
     },
+
     {
       "id": "Dashboard-concept",
       "what": "Concept of a Dashboard",
-       "prevImage": "/images/prevImg/dashboard_pick.png",
-         
-      
+      "prevImage": "/images/prevImg/dashboard_pick.png",
+
       "images": [
         {
           "image": "/images/powerFlow_components.png",
@@ -171,9 +246,8 @@
     {
       "id": "portfolio-design",
       "what": "Simple Porfolio",
-       "prevImage":  "/images/prevImg/portfolio_pick.png",
-         
-     
+      "prevImage": "/images/prevImg/portfolio_pick.png",
+
       "images": [
         {
           "image": "/images/logga.svg",
@@ -212,28 +286,18 @@
           "title": "Creating the webb page, using React",
           "sectionOne": "Every part of this portfolio is built using React and Next.js. Building this portfolio has been a learning journey, where I’ve honed my skills in React while keeping the design and functionality aligned with my principles of simplicity, clarity, and efficiency. "
         }
-
       ]
     },
 
     {
       "id": "openSpace",
       "what": "OpenSpace",
-      "prevImage":  "/images/prevImg/openspace_pick.png",
-         
-      
+      "prevImage": "/images/prevImg/openspace_pick.png",
+
       "images": [
-        {
-          "image": "/images/storyline.png",
-          "imcap": "First draft over the storyline when Antarctica is picked: (1) Satellites, (2) Overview of surface currents, (3) A more detailed view of the surface currents, (4) Overview on how the ice melts over Antarctica, (5) Glaciers, (6) Consequences"
-        },
         {
           "image": "/images/introduction_blue.png",
           "imcap": "The starting page of the interface is were the user can pick a story. When the program starts the instruction button in the left corner in blinking to get the user’s attention."
-        },
-        {
-          "image": "/images/grace.png",
-          "imcap": "Visualization of ice melt over time using GRACE data. Colors indicate changes in ice mass, with blue and orange chosen to represent loss and gain due to their better accessibility for color blindness. The color legend helps interpret the intensity of melting."
         }
       ],
 
@@ -247,6 +311,10 @@
         "Interactive storytelling and narrative UX",
         "User testing and iteration"
       ],
+      "link": {
+        "link": "/files/masterThesis.pdf",
+        "linkcap": "Master thesis report"
+      },
       "sections": [
         {
           "title": "Overview",
@@ -256,12 +324,16 @@
         {
           "title": "My Role",
           "sectionOne": "I was responsible for the full UX and data visualization process.",
-          "steps": [
-            "Researched and storyboarded the climate story with input from experts",
-            "Designed and implemented the user interface in React",
-            "Developed two navigation modes: a structured narrative and an open-world exploration",
-            "Converted scientific datasets from raw formats to visual layers (NetCDF to GeoTIFF to VRT)",
-            "Conducted user testing and iterated based on feedback"
+          "subsections": [
+            {
+              "subSteps": [
+                "Researched and storyboarded the climate story with input from experts",
+                "Designed and implemented the user interface in React",
+                "Developed two navigation modes: a structured narrative and an open-world exploration",
+                "Converted scientific datasets from raw formats to visual layers (NetCDF to GeoTIFF to VRT)",
+                "Conducted user testing and iterated based on feedback"
+              ]
+            }
           ]
         },
         {
@@ -272,6 +344,13 @@
         {
           "title": "Design Process",
           "sectionOne": "The design process included four key phases from research to implementation and testing.",
+
+          "sectionImages": [
+            {
+              "image": "/images/storyline.png",
+              "imcap": "Storyline draft over how the ice is melting and the consequences (1) Viewing the Earth from space with orbiting satellites collecting data, (2) Overview of surface currents and their connections from north to south, (3) Detailed view of surface currents over time, (4) Ice melt in Antarctica visualized over time, (5) Glaciers and potential collapses, (6) Global consequences of ice loss."
+            }
+          ],
           "subsections": [
             {
               "title": "1. Understanding the data and story",
@@ -281,7 +360,7 @@
               "title": "2. Storyboarding and UX design",
               "sectionOne": "I explored different forms of interactive storytelling and decided to implement two modes:",
               "subSteps": [
-                "A decision-based narrative, where users could follow a guided story about glacier melting and sea-level rise",
+                "A decision-based narrative, where users could follow a guided story about glacier melting and sea-level rise on different continents, see image above for the steps in one of the storylines",
                 "An open-world mode, where users could freely explore datasets, switch layers, and zoom in on different parts of Earth"
               ],
               "sectionTwo": "Using Figma, I sketched layouts for both story modes, tested UI component placement, and iterated on navigation flows. I focused on keeping Earth in view at all times, with side panels for text, legends, and time controls."
@@ -312,6 +391,13 @@
         {
           "title": "Outcome",
           "sectionOne": "The final interface was successfully integrated into OpenSpace and tested with users of varying backgrounds. It allowed non-experts to explore scientific climate data and learn through interaction.",
+
+          "sectionImages": [
+            {
+              "image": "/images/grace.png",
+              "imcap": "Visualization of Antarctic ice melt over time using GRACE data. Blue and orange indicate ice loss and gain, chosen for color-blind accessibility. The legend helps interpret the intensity of changes."
+            }
+          ],
           "steps": [
             "Follow a narrative about glacier melt and sea-level rise",
             "Explore real climate datasets with minimal friction",
@@ -328,8 +414,8 @@
     {
       "id": "education",
       "what": "Education",
-       "prevImage": "/images/prevImg/mt_pick.png",
-          
+      "prevImage": "/images/prevImg/mt_pick.png",
+
       "images": [
         {
           "image": "/images/logo_mt.png",
@@ -343,7 +429,7 @@
         }
       ],
 
-      "heading": "Master of Science in Media Technology",
+      "heading": "Education:  Master of Science in Media Technology",
       "subheading": "A broad and interdisciplinary foundation in digital systems, design, and software development, at Linköping University. (1017-1022) ",
       "introduction": "A broad and interdisciplinary foundation in digital systems, design, and software development. ",
       "bullets": [

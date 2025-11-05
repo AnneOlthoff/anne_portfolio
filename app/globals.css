@@ -76,7 +76,7 @@ ul {
   color: var(--text, var(--heading));
 }
 li {
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 .mainli {
@@ -123,17 +123,15 @@ html {
   padding-top: 3rem;
   text-align: left;
   justify-content: center;
-  align-items: end;
   padding-bottom: 4rem;
 }
 .text_grid {
   display: flex;
   flex-direction: row;
-  align-items: end;
   gap: 2rem;
   padding: 0.5rem;
   width: 100%;
-  margin-top: 2rem;
+  
   padding-top: 3rem;
   text-align: left;
   max-width: 90rem;
@@ -154,6 +152,14 @@ html {
   width: 100%;
   margin: 0 auto;
 }
+.subImageGrid {
+    
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 0.4rem;
+}
 
 @media (max-width: 900px) {
   .heading_grid {
@@ -171,6 +177,12 @@ html {
   .projectGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .subImageGrid{
+    flex-direction: column;
+    
+  }
+  
 }
 
 @media (max-width: 600px) {

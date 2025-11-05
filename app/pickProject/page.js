@@ -25,11 +25,9 @@ export default function Projects() {
     <section style={styles.container} data-aos="fade-up">
       <div>
         <h1>My work</h1>
-        <p>
-          Learn more about where I am today and how I got here. Check out some
-          of my small projects or my university thesis – and stay tuned, as more
-          projects will be added soon!
-        </p>
+        <h3>
+          A mix of UX, UI, and data visualization projects I’ve designed and built, often at the intersection of technology, usability and storytelling.
+        </h3>
       </div>
 
       {/* Knappar överst */}
@@ -56,7 +54,7 @@ export default function Projects() {
                   />
                 </div>
 
-                <p style={styles.overlayText}>{project.what}</p>
+                <p style={styles.overlayText}>{project.heading}</p>
               </div>
             </div>
           </Link>
@@ -105,10 +103,10 @@ const styles = {
     zIndex: 2,
     color: "var(--heading-secondary)",
    
-    borderRadius: "0.1rem",
+    borderRadius: "0.2rem",
     fontWeight: "bold",
     textAlign: "left",
-    maxWidth: "34%", // resten av utrymmet
+    maxWidth: "40%", // resten av utrymmet
     whiteSpace: "normal",
     wordWrap: "break-word",
     overflow: "hidden",
