@@ -1,16 +1,19 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+
 import "../../globals.css";
 import projectsData from "../../../public/data/file.json";
+import ImLoad from "../../components/imLoad.js";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function DisplayProject({ params }) {
   const [isDark, setIsDark] = useState(false);
+  
   // const [selectedImage, setSelectedImage] = useState(null);
-
+  
+  
   const project = projectsData.projects.find(
     (p) => p.id.toString() === params.id
   );
@@ -70,15 +73,12 @@ export default function DisplayProject({ params }) {
             data-aos-duration="1800"
             onClick={() => setSelectedImage(image)}
           >
-            <Image
-              src={image.image || "/default-image.jpg"}
-              alt={image.imcap || "Project Image"}
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "48rem", height: "auto", maxHeight: "30rem", objectFit: "contain" }}
+            <ImLoad
+             src={image.image}
+             alt={image.imcap}
             />
-            {image.imcap && <p style={styles.imcap}>{image.imcap}</p>}
+           
+            
           </div>
         ))}
       </div>
@@ -98,17 +98,10 @@ export default function DisplayProject({ params }) {
                     data-aos-duration="1800"
                     onClick={() => setSelectedImage(image)}
                   >
-                    <Image
+                    <ImLoad
                       src={image.image}
-                      alt={image.imcap || "Section image"}
-                      width={0}
-                      height={0}
-                      
-                      sizes="100vw"
-                      style={{ width: "48rem", height: "auto", maxHeight: "30rem",
-                      objectFit: "contain"}}
+                      alt={image.imcap}
                     />
-                    {image.imcap && <p style={styles.imcap}>{image.imcap}</p>}
                   </div>
                 ))}
               </div>
@@ -222,8 +215,6 @@ const styles = {
     display: "flex",
     flexWrap: "wrap",
     gap: "1rem",
-    textAlign: "center",
-    justifyContent: "center",
     width: "98vw",
     marginLeft: "calc(-10%)",
     marginRight: "calc(-10%)",
@@ -246,7 +237,6 @@ const styles = {
   subImageContainer: {
     flex: "1 1 600px",
     padding: "4rem 4rem 2rem 4rem",
-   
     backgroundColor: "var(--background-third)",
     cursor: "pointer",
     borderColor: "var(--divider-color)  ",
