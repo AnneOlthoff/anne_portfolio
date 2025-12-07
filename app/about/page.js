@@ -52,7 +52,7 @@ export default function About() {
         </div>
         <div style={styles.fact}>
           <h1> 2 </h1>
-          <p>  Two cups of black coffee every day  </p>
+          <p> Two cups of black coffee every day </p>
           <br />
         </div>
 
@@ -96,7 +96,7 @@ const styles = {
     flexWrap: "wrap",
     display: "flex",
     flexDirection: "column",
-    
+
     textAlign: "left",
   },
 
@@ -109,6 +109,5 @@ const styles = {
 
   fact: {
     flex: "1 1 50%",
-    flex: 2,
   },
 };

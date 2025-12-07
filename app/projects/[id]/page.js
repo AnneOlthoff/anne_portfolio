@@ -11,11 +11,11 @@ import "aos/dist/aos.css";
 
 export default function DisplayProject() {
   const [isDark, setIsDark] = useState(false);
-  
-  // const [selectedImage, setSelectedImage] = useState(null);
+
+  const [_, setSelectedImage] = useState(null);
   const params = useParams();
   const project = projectsData.projects.find(
-    (p) => p.id.toString() === params.id
+    (p) => p.id.toString() === params.id,
   );
 
   // Lyssna på systemets färgtema
@@ -34,7 +34,7 @@ export default function DisplayProject() {
   const imagesToShow =
     project.id === "education"
       ? project.images.filter((img) =>
-          isDark ? img.theme === "dark" : img.theme === "light"
+          isDark ? img.theme === "dark" : img.theme === "light",
         )
       : project.images;
 
@@ -73,12 +73,7 @@ export default function DisplayProject() {
             data-aos-duration="1800"
             onClick={() => setSelectedImage(image)}
           >
-            <ImLoad
-             src={image.image}
-             alt={image.imcap}
-            />
-           
-            
+            <ImLoad src={image.image} alt={image.imcap} />
           </div>
         ))}
       </div>
@@ -89,7 +84,7 @@ export default function DisplayProject() {
           <div key={index} style={{ marginTop: "2rem" }}>
             {/* Bilder inuti sektioner */}
             {section.sectionImages && section.sectionImages.length > 0 && (
-              <div className= "subImageGrid">
+              <div className="subImageGrid">
                 {section.sectionImages.map((image, imgIndex) => (
                   <div
                     key={imgIndex}
@@ -98,10 +93,7 @@ export default function DisplayProject() {
                     data-aos-duration="1800"
                     onClick={() => setSelectedImage(image)}
                   >
-                    <ImLoad
-                      src={image.image}
-                      alt={image.imcap}
-                    />
+                    <ImLoad src={image.image} alt={image.imcap} />
                   </div>
                 ))}
               </div>
@@ -197,7 +189,6 @@ const styles = {
     paddingBottom: "8rem",
   },
 
- 
   headingColumn: {
     flex: "1",
     minWidth: "250px",
@@ -232,8 +223,6 @@ const styles = {
     flexDirection: "column",
   },
 
-  
-
   subImageContainer: {
     flex: "1 1 600px",
     padding: "4rem 4rem 2rem 4rem",
@@ -244,7 +233,7 @@ const styles = {
     alignItems: "center", // centrerar horisontellt
     justifyContent: "center", //centrerar vertikalt
     flexDirection: "column",
-    width: "100%"
+    width: "100%",
   },
   imcap: {
     marginTop: "1rem",

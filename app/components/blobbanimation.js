@@ -1,5 +1,4 @@
-
-'use client'; 
+"use client";
 // import { useRef } from 'react';
 
 // export default function SvgWobbleAnimation() {
@@ -11,7 +10,7 @@
 //         targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 //       }
 //     };
-    
+
 //     return (
 //         <div style={styles.logostyle}>
 //             <svg
@@ -36,9 +35,9 @@
 //                         }
 //                         @keyframes morph {
 //                             0% {
-                                
+
 //                                 d: path("M205.588,105.398l-15.38-14.943c-1.624-1.578-3.02-3.375-4.146-5.339l-5.596-9.755c-5.442-9.485-16.547-14.17-27.137-11.448l-9.679,2.487c-3.266.839-6.671.99-9.998.442l-14.253-2.346c-11.328-1.865-22.417,4.45-26.593,15.144l-2.538,6.499c-1.882,4.819-5.253,8.913-9.622,11.684l-4.314,2.737c-9.815,6.226-13.849,18.529-9.627,29.359l7.592,19.47c1.095,2.807,1.658,5.795,1.661,8.809l.005,5.514c.01,10.262,6.462,19.413,16.125,22.868l21.311,7.62c3.15,1.127,6.034,2.892,8.472,5.184l8.36,7.864c10.341,9.728,26.782,8.562,35.647-2.528l1.65-2.064c2.654-3.321,6.134-5.888,10.09-7.444l11.228-4.417c8.88-3.494,14.895-11.86,15.379-21.391l.854-16.842c.117-2.303.561-4.577,1.318-6.755l5.212-14.987c3.105-8.924.756-18.838-6.021-25.423Z");
-                           
+
 //                             }
 //                             25% {
 //                                  d: path("M203.211,106.776l-15.357-19.187-11.372-12.211c-5.078-5.453-12.221-8.509-19.671-8.416l-18.02.224-22.766,1.379c-8.009.485-15.331,4.689-19.786,11.363l-8.774,13.141v.002s-9.84,9.235-9.84,9.235c-6.762,6.002-10.381,17.024-7.35,27.173l4.784,19.376c.421,1.704.66,3.447.714,5.201l.283,9.171c2.481,9.976,6.168,16.16,16.125,22.868l17.229,8.385c3.15,1.127,7.658,2.965,10.095,5.258l8.41,5.324c12.282,7.776,28.257,6.331,38.944-3.523l4.813-4.437,16.703-8.946c7.055-3.778,11.975-10.597,13.336-18.483l3.636-21.068,2.911-18.062c1.239-10.684.701-15.848-5.048-23.766Z");
@@ -62,31 +61,30 @@
 //     );
 // }
 
-
-import { useRef } from 'react';
+import { useRef } from "react";
 
 export default function SvgWobbleAnimation() {
-    const targetRef = useRef(null);
+  const targetRef = useRef(null);
 
-    const handleAnimationEnd = () => {
-      const targetElement = targetRef.current;
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    };
-    
-    return (
-        <div style={styles.logostyle}>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 600 600"
-                width="900"
-                height="900"
-                onAnimationEnd={handleAnimationEnd}
-                className="wobble"
-            >
-                <style>
-                    {`
+  const handleAnimationEnd = () => {
+    const targetElement = targetRef.current;
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  return (
+    <div style={styles.logostyle}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 600 600"
+        width="900"
+        height="900"
+        onAnimationEnd={handleAnimationEnd}
+        className="wobble"
+      >
+        <style>
+          {`
                         .fixed-circle {
                             fill: #ff6b81;
                         }
@@ -117,29 +115,28 @@ export default function SvgWobbleAnimation() {
                         }
                         
                     `}
-                </style>
-                <path className="wobble-shape" />
-            </svg>
-            <div ref={targetRef} style={styles.target}></div>
-        </div>
-    );
+        </style>
+        <path className="wobble-shape" />
+      </svg>
+      <div ref={targetRef} style={styles.target}></div>
+    </div>
+  );
 }
 
 const styles = {
-    logostyle: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: 'center',
-        minHeight: '50vh',
+  logostyle: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    minHeight: "50vh",
 
-        color: 'red',
-    },
-    target: {
-        marginTop: '100vh',
-        padding: '2rem',
-    },
+    color: "red",
+  },
+  target: {
+    marginTop: "100vh",
+    padding: "2rem",
+  },
 };
-
 
 // 0% {
 //     d: path("M205.588,105.398l-15.38-14.943c-1.624-1.578-3.02-3.375-4.146-5.339l-5.596-9.755c-5.442-9.485-16.547-14.17-27.137-11.448l-9.679,2.487c-3.266.839-6.671.99-9.998.442l-14.253-2.346c-11.328-1.865-22.417,4.45-26.593,15.144l-2.538,6.499c-1.882,4.819-5.253,8.913-9.622,11.684l-4.314,2.737c-9.815,6.226-13.849,18.529-9.627,29.359l7.592,19.47c1.095,2.807,1.658,5.795,1.661,8.809l.005,5.514c.01,10.262,6.462,19.413,16.125,22.868l21.311,7.62c3.15,1.127,6.034,2.892,8.472,5.184l8.36,7.864c10.341,9.728,26.782,8.562,35.647-2.528l1.65-2.064c2.654-3.321,6.134-5.888,10.09-7.444l11.228-4.417c8.88-3.494,14.895-11.86,15.379-21.391l.854-16.842c.117-2.303.561-4.577,1.318-6.755l5.212-14.987c3.105-8.924.756-18.838-6.021-25.423Z");

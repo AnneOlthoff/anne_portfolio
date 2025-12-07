@@ -6,7 +6,14 @@ export default function ImLoad({ src, alt }) {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div style={{  overflow: "hidden",  display: "flex",flexDirection: "column",  alignItems: "center", }}>
+    <div
+      style={{
+        overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       {/* Placeholder innan bilden laddas */}
       {!loaded && (
         <div
@@ -49,7 +56,7 @@ export default function ImLoad({ src, alt }) {
           style={{
             marginTop: "1rem",
             fontStyle: "italic",
-            maxWidth: "34rem",  
+            maxWidth: "34rem",
             textAlign: "center",
           }}
         >

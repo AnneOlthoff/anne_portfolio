@@ -1,28 +1,27 @@
-
-import { useRef } from 'react';
+import { useRef } from "react";
 
 export default function SvgHeartbeatAnimation() {
-    const targetRef = useRef(null);
+  const targetRef = useRef(null);
 
-    const handleAnimationEnd = () => {
-      const targetElement = targetRef.current;
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    };
-    
-    return (
-        <div style={styles.logostyle}>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 200 200"
-                width="300"
-                height="300"
-                onAnimationEnd={handleAnimationEnd}
-                className="heartbeat"
-            >
-                <style>
-                    {`
+  const handleAnimationEnd = () => {
+    const targetElement = targetRef.current;
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  return (
+    <div style={styles.logostyle}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 200 200"
+        width="300"
+        height="300"
+        onAnimationEnd={handleAnimationEnd}
+        className="heartbeat"
+      >
+        <style>
+          {`
                         .heartbeat {
                             fill: #ff6b81;
                         }
@@ -58,27 +57,27 @@ export default function SvgHeartbeatAnimation() {
                             }
                         }
                     `}
-                </style>
-                <circle className="pulse" cx="100" cy="100" r="40" />
-                <circle className="pulse" cx="100" cy="100" r="40" />
-                
-                <circle className="pulse" cx="100" cy="100" r="40" />
-                <circle cx="100" cy="100" r="40" className="heartbeat" />
-            </svg>
-            <div ref={targetRef} style={styles.target}></div>
-        </div>
-    );
+        </style>
+        <circle className="pulse" cx="100" cy="100" r="40" />
+        <circle className="pulse" cx="100" cy="100" r="40" />
+
+        <circle className="pulse" cx="100" cy="100" r="40" />
+        <circle cx="100" cy="100" r="40" className="heartbeat" />
+      </svg>
+      <div ref={targetRef} style={styles.target}></div>
+    </div>
+  );
 }
 
 const styles = {
-    logostyle: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: 'center',
-        minHeight: '100vh',
-    },
-    target: {
-        marginTop: '100vh',
-        padding: '2rem',
-    },
+  logostyle: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    minHeight: "100vh",
+  },
+  target: {
+    marginTop: "100vh",
+    padding: "2rem",
+  },
 };

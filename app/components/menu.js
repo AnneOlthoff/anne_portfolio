@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-
- 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,7 +10,11 @@ export default function Navbar() {
     <nav style={styles.navbar}>
       <div style={styles.logo}>
         <Link href="/">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+            width="40"
+          >
             <circle cx="50" cy="50" r="40" fill="blue" />
           </svg>
         </Link>
@@ -25,13 +27,18 @@ export default function Navbar() {
         ☰
       </button>
       <div style={styles.links(isOpen)}>
-        <Link href="/" style={styles.link}>Hem</Link>
-        <Link href="/about" style={styles.link}>Om oss</Link>
-        <Link href="/contact" style={styles.link}>Kontakt</Link>
+        <Link href="/" style={styles.link}>
+          Hem
+        </Link>
+        <Link href="/about" style={styles.link}>
+          Om oss
+        </Link>
+        <Link href="/contact" style={styles.link}>
+          Kontakt
+        </Link>
       </div>
     </nav>
   );
-
 }
 
 const styles = {

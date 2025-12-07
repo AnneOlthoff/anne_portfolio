@@ -7,7 +7,6 @@ import Link from "next/link";
 
 export default function Projects() {
   const [data, setData] = useState([]);
-  
 
   // Hämta JSON-data
   useEffect(() => {
@@ -20,13 +19,14 @@ export default function Projects() {
       .catch((err) => console.error("Error loading JSON:", err));
   }, []);
 
-
   return (
     <section style={styles.container} data-aos="fade-up">
       <div>
         <h1>My work</h1>
         <h3>
-          A mix of UX, UI, and data visualization projects I’ve designed and built, often at the intersection of technology, usability and storytelling.
+          A mix of UX, UI, and data visualization projects I’ve designed and
+          built, often at the intersection of technology, usability and
+          storytelling.
         </h3>
       </div>
 
@@ -50,7 +50,6 @@ export default function Projects() {
                     height={0}
                     sizes="100vw"
                     style={{ width: "50rem", height: "auto" }}
-                     
                   />
                 </div>
 
@@ -102,7 +101,7 @@ const styles = {
     left: "60%", // starta vid 2/3 av bildens bredd
     zIndex: 2,
     color: "var(--heading-secondary)",
-   
+
     borderRadius: "0.2rem",
     fontWeight: "bold",
     textAlign: "left",

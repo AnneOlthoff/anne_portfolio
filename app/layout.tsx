@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 // import { Inter} from "next/font/google";
-import localFont from "next/font/local"; 
+import localFont from "next/font/local";
 
 import "./globals.css";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
 
-const inter = localFont({src: "./Inter.ttf"})
+const inter = localFont({ src: "./Inter.ttf" });
 
 // Inter({
 //   display: "swap",
@@ -17,13 +17,10 @@ const inter = localFont({src: "./Inter.ttf"})
 //   adjustFontFallback: false
 // });
 
-
-
 export const metadata: Metadata = {
   title: "Anne Olthoff's portfolio",
   description: "",
 };
-
 
 export default function RootLayout({
   children,
@@ -35,9 +32,7 @@ export default function RootLayout({
       <body className="antialiased">
         <div className="page_layout">
           <Header />
-          <main className="main_content">
-            {children}
-          </main> 
+          <main className="main_content">{children}</main>
           <Footer />
         </div>
       </body>
