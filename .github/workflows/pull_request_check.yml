@@ -10,7 +10,13 @@ jobs:
    steps: 
     - name: Checkout repository
       uses: actions/checkout@v6.0.1
+        with:
+          # REQUIRED: Pass the token here for fetching and authentication
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Check contents
+    - name: Install nix 
+      uses: uses: DeterminateSystems/determinate-nix-action@v3.5.2 
+
+    - name: Test build
       run: | 
-        ls .
+        nix build .
