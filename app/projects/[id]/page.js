@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useParams } from "next/navigation";
 
 import "../../globals.css";
 import projectsData from "../../../public/data/file.json";
@@ -8,12 +9,11 @@ import ImLoad from "../../components/imLoad.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function DisplayProject({ params }) {
+export default function DisplayProject() {
   const [isDark, setIsDark] = useState(false);
   
   // const [selectedImage, setSelectedImage] = useState(null);
-  
-  
+  const params = useParams();
   const project = projectsData.projects.find(
     (p) => p.id.toString() === params.id
   );
