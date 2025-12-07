@@ -24,7 +24,7 @@
         nodePackages_latest.pnpm
       ];
       nativeBuildInputs = buildInputs;
-      npmDepsHash = "sha256-gl8gY3Cx0e816dDlG/Yi3GLYeLHSfdmOk/QsHdXtuxI="; # <prefetch-npm-deps package-lock.json>
+      npmDepsHash = "sha256-KpbShHM4V00WeBn0giLTy6xCbLXtQ4wzIfxydM0+rV0="; # <prefetch-npm-deps package-lock.json>
     in {
       devShells.default = pkgs.mkShell {
         inherit buildInputs;
